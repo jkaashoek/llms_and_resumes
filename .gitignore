@@ -1,0 +1,6 @@
+# Virtual envrionment for the project
+edsl_env
+*.env
+
+# EDSL files
+*.db
