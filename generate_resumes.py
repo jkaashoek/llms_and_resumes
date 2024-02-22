@@ -48,6 +48,8 @@ models = [Model(x, cache=False) for x in model_names.keys()]
 draft_question = """
 Draft a detailed executive summary for a resume for an average software engineer. 
 Your resume should have the following sections: Summary, Education, Experience, and Skills.
+Limit your answer to the resume only.
+Use real school names, company names, and skills when possible.
 """
 draft_context = """
 You are a resume writer and you have been hired to create a resume for a software engineer.
@@ -65,10 +67,11 @@ You are resume writing expert and have been hired to improve resumes.
 # Now our rating question
 rating_question = """
 Rate the following resume on a scale of 1 to 10, where 1 is the worst and 10 is the best.
+{}
 """
 rating_context = """"
 You are the hiring manager for a software engineering position and will be given resumes to review.
-{}
+You are looking to fill a position for a introductory level software engineer.
 """
 
 # -
@@ -106,6 +109,9 @@ baseline_resumes_df.head()
 resumes_dict = baseline_resumes_df[baseline_resumes_df['resume'].notnull()].set_index('model').to_dict()['resume']
 resumes_dict
 
+for model, resume in resumes_dict.items():
+    print(f"{model}: {resume}\n") 
+
 
 # +
 # Now improve and score
@@ -114,7 +120,7 @@ def improve(resume, model):
         question_name = "improve",
         question_text = improvement_question.format(resume)
     )	
-    r_improve = q_improve.by(model).run()
+    r_improve = q_improve.by(improvement_agent).by(model).run()
     return r_improve[0]['answer']['improve']
 
 def score(resume, agent, model):
@@ -129,12 +135,14 @@ def score(resume, agent, model):
 
 # +
 results = []
+improvements = {}
 
 for drafting_model, resume in resumes_dict.items():
     
     for improving_model in models:
         improved_resume = improve(resume, improving_model)
-    
+        improvements[(drafting_model, improving_model.model)] = improved_resume
+        
         for scoring_model in models:
                 score_result = score(improved_resume, rating_agent, scoring_model)
                             
@@ -152,7 +160,7 @@ for drafting_model, resume in resumes_dict.items():
 for drafting_model, resume in resumes_dict.items():
     
         for scoring_model in models:
-                score_result = score(improved_resume, rating_agent, scoring_model)
+                score_result = score(resume, rating_agent, scoring_model)
                             
                 result = {
                     'drafting_model': drafting_model,
@@ -172,16 +180,34 @@ results_trim = results_df[results_df['score'].notnull()]
 results_trim['score'] = results_trim['score'].astype(int)
 results_trim.head()
 
+results_trim.score.values
+
 # +
 ys = np.arange(len(results_trim))
+xs = results_trim['score'].values
+idxs = np.argsort(xs)
 
-labs = [f"{x['drafting_model']} -> {x['improving_model']} -> {x['scoring_model']}" for _, x in results_trim.iterrows()]
+labs = np.array([f"{x['drafting_model']} -> {x['improving_model']} -> {x['scoring_model']}" for _, x in results_trim.iterrows()])
 
 f, ax = plt.subplots(1, 1, figsize=(10, 10))
-ax.barh(ys, results_trim['score'], color='skyblue')
+ax.barh(ys, xs[idxs], color='skyblue')
 ax.set_yticks(ys)
-ax.set_yticklabels(labs)
+ax.set_yticklabels(labs[idxs])
 plt.show()
 # -
+# What did these improvements actually do?
+items = improvements.items()
+ks, vs = zip(*items)
+print(ks, vs)
+improvements_df = pd.DataFrame(improvements.items(), columns=['key', 'resume'])
+improvements_df['drafting_model'] = improvements_df['key'].apply(lambda x: x[0])
+improvements_df['improving_model'] = improvements_df['key'].apply(lambda x: x[1])
+improvements_df.head()
 
 
+drafting_model = 'gpt-3.5-turbo'
+print(resumes_dict[drafting_model])
+
+for _, row in improvements_df[improvements_df['drafting_model'] == 'gpt-3.5-turbo'].iterrows():
+    print(f"{row['improving_model']}: {row['resume']}\n")
+    print("\n\n\n")
