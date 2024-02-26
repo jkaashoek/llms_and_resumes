@@ -3,6 +3,7 @@ import numpy as np
 import edsl
 from edsl.questions import QuestionFreeText
 from edsl import Agent, Survey, Model
+from PyPDF2 import PdfReader
 import os
 
 
@@ -12,16 +13,35 @@ def extract_from_pdf(write_dir : str, existing_resume_dir : str) -> None:
     for file in os.listdir(directory):
         filename = os.fsdecode(file)
         if filename.endswith(".pdf"):
-            print(filename)
-            continue
+            reader = PdfReader(f'{existing_resume_dir}/{filename}')
+            text = ''
+            for page in reader.pages:
+                text += page.extract_text() + '\n'
+            
+            with open(f'{write_dir}/{filename[:-4]}.txt', 'w') as f:
+                f.write(text)
+        
         else:
             continue
-
-    # Extract text from PDFs
-    # text = edsl.extract_text_from_pdf('resumes.pdf')
+        
     return
 
-def generate_resume(model_list : list[edsl.language_models], model_strs : list[str], prompts: list[str], prompt_strs : list[str]) -> None:
+def write_resumes(write_dir : str, res_df : pd.DataFrame) -> None:
+    '''
+    Writes resumes to a directory
+    Assumes res_df is a df with each row being a survey response
+    '''
+    cols = res_df.columns[:-1]
+    for i, row in res_df.iterrows():
+        model = row['model.model']
+        for c in cols:
+            idx = c.find('answer') + len('answer') + 1
+            fname = f'{write_dir}/{model}_{c[idx:]}.txt'
+            with open(fname, 'w') as f:
+                f.write(row[c])
+    return
+
+def generate_resume(model_list : list[edsl.language_models], prompts: list[str], prompt_strs : list[str]) -> None:
     '''
     Generate a resume using a generative model
     '''
@@ -37,7 +57,7 @@ def generate_resume(model_list : list[edsl.language_models], model_strs : list[s
 def run_creation(write_dir : str = 'extracted_resumes', 
                  existing_resume_dir : str = 'real_resumes',
                  model_list : list[edsl.language_models] = [],
-                 model_strs : list[str] = [],
+                 model_to_str : dict = {},
                  prompts : list[str] = None,
                  prompt_strs : list[str] = None) -> None:
     '''
@@ -57,10 +77,6 @@ def run_creation(write_dir : str = 'extracted_resumes',
             raise Exception('No existing resumes and no models provided. Please specify one or the other')
             return
         
-        elif len(model_list) != len(model_strs):
-            raise Exception('Number of models and model strings do not match. Please provide a model string for each model')
-            return
-        
         elif len(prompts) == 0:
             raise Exception('No prompts provided. Please specify a prompt for the generative model')
             return
@@ -70,7 +86,10 @@ def run_creation(write_dir : str = 'extracted_resumes',
             return
         
         else:
-            generate_resume(model_list, model_strs, prompts, prompt_strs)
+            res_df = generate_resume(model_list, prompts, prompt_strs)
+            res_df['model.model']  = res_df['model.model'].apply(lambda x: model_to_str[x])
+            write_resumes(write_dir, res_df)
+            return res_df
 
     return
         
@@ -79,16 +98,18 @@ def run_creation(write_dir : str = 'extracted_resumes',
 # print(run_creation(existing_resume_dir = 'real_resumes'))
 
 # The generative model case
-models = Model.available()
-# print(models)
-models = models[:1]
-models = [Model(model) for model in models]
-model_strs = ['gpt35']#, 'gpt4', 'gemini', 'llama']
-prompts = ['create a resume for a software engineer. Your resumes should be 1 page long and include your education, work experience, and skills',]
-res_df = run_creation(existing_resume_dir = None,
-             model_list = models, 
-             model_strs = model_strs, 
-             prompts = prompts, 
-             prompt_strs = ['software_engineer_resume'])
-print(res_df)
-# print(models)
+# models = Model.available()
+# models = models[:1]
+# model_objs = [Model(model) for model in models]
+# model_strs = ['gpt35']#, 'gpt4', 'gemini', 'llama']
+# # prompts = ['create a resume for a software engineer. Your resumes should be 1 page long and include your education, work experience, and skills',]
+# prompts = ['why is the sky blue?']
+# res_df = run_creation(existing_resume_dir = None,
+#              model_list = model_objs, 
+#              model_to_str = dict(zip(models, model_strs)), 
+#              prompts = prompts, 
+#              prompt_strs = ['software_engineer_resume'])
+# print("Outside of function call", res_df)
+# print(res_df)
+
+extract_from_pdf('extracted_resumes', 'resumes')
