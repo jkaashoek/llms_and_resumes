@@ -1,1 +1,7 @@
-The sky appears blue because of the way Earth's atmosphere scatters sunlight. Shorter blue wavelengths are scattered more than other colors, making the sky look blue to our eyes.
+Education: Bachelor's Degree in Computer Science, XYZ University
+
+Work Experience: Software Engineer at ABC Tech (2018-2021)
+- Developed and maintained software applications
+- Collaborated with cross-functional teams to deliver projects on time
+
+Skills: Proficient in Java, Python, C++, SQL, Agile methodology, problem-solving, and communication skills
