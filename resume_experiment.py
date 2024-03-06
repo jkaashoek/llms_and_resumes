@@ -3,7 +3,8 @@ import numpy as np
 import edsl
 from edsl.questions import QuestionFreeText, QuestionLinearScale
 from edsl import Agent, Survey, Model
-from helpers import extract_resumes_from_dir, write_resumes
+from helpers import extract_from_pdf, write_results, txt_to_df
+from consts import model_to_str
 import os 
 
 
@@ -13,77 +14,44 @@ import os
 # Evalute
 # Each should have it's own agent(s), model(s), and instruction(s)
 
+# Features:
+# update_agent, update_models
+# evaluate_agent, evaluate_models 
 
 class ResumeExperiment:
-    def __init__(self) -> None:
-        pass
+    def __init__(self, features : dict, expr_dir : str) -> None:
+        self.features = features
+        self.expr_dir = expr_dir
+        return
 
-
-def write_resumes(write_dir : str, res_df : pd.DataFrame, suffix = False) -> None:
-    '''
-    Writes resumes to a directory
-    Assumes res_df is a df with each row being a survey response
-    '''
-    if os.path.exists(write_dir):
-        pass
-    else:
-        print(f"creating directory {write_dir}")
-        os.makedirs(write_dir)
-
-    cols = res_df.columns[:-1]
-    for i, row in res_df.iterrows():
-        model = row['model.model']
-        for c in cols:
-            idx = c.find('answer') + len('answer') + 1
-            if suffix:
-                fname = f'{write_dir}/{c[idx:]}_{model}.txt'
-            else:
-                fname = f'{write_dir}/{model}_{c[idx:]}.txt'
-            with open(fname, 'w') as f:
-                f.write(row[c])
-    return
-
-def extract_resumes_from_dir(resume_dir : str) -> list[list[str, str]]:
-    '''
-    Extracts the text from a directory of resumes.
-    These have to be txt files containing the text extracted from a resume, not PDFs
-    Results is of the form [[filename, text], ...]
-    '''
-    resumes = []
-    for f in os.listdir(resume_dir):
-        if f.endswith('.txt'):
-            with open(f'{resume_dir}/{f}', 'r') as file:
-                resumes.append([f[:-4], file.read()])
-    return resumes
-
-
-def update_resumes(agent_list : list[edsl.agents], 
-                    model_list : list[edsl.language_models],
-                    model_to_str : dict,
-                    update_dirs : list[str],
-                    update_prompt : str = "Improve the following resumes",
-                    write_dir_suffix = '_updated') -> pd.DataFrame:
-    '''
-    Update a resume using the agents and models provided
-    '''
-    for d in update_dirs:
+    def update_params(self, new_params) -> None:
+        for k, v in new_params.items():
+            self.features[k] = v
+        return
+    
+    def update_resumes(self, update_dirs, write_dir_suffix = '_updated') -> pd.DataFrame:
+        for d in update_dirs:
         
-        if not os.path.exists(d):
-            raise Exception(f'Directory {d} does not exist')
-            continue
+            if not os.path.exists(d):
+                raise Exception(f'Directory {d} does not exist')
+                continue
 
-        else:
-            write_dir = f'{d}{write_dir_suffix}'
+            else:
+                write_dir = f'{self.expr_dir}{d}{write_dir_suffix}'
 
-            resumes = extract_resumes_from_dir(d)
-            # Evaluate the resumes where the question name is the filename
-            update_survey = Survey(questions = [QuestionFreeText(question_name = name, 
-                                                                  question_text=update_prompt + r_text) for name, r_text in resumes])
-            results = update_survey.by(agent_list).by(model_list).run()
-            res_df = results.select("model.model", "answer.*").to_pandas()
-            res_df['model.model']  = res_df['model.model'].apply(lambda x: model_to_str[x])
-            write_resumes(write_dir, res_df)
-    return res_df
+                # Reads the txt from resumes into a dataframe
+                resumes = txt_to_df(d)
+                # Evaluate the resumes where the question name is the filename
+                update_survey = Survey(questions = [
+                    QuestionFreeText(question_name = name, question_text=self.features['update_prompt'] + r_text) 
+                    for name, r_text in resumes
+                ])
+                results = update_survey.by(self.features['agent_list']).by(self.features['model_list']).run()
+                res_df = results.select("model.model", "answer.*").to_pandas()
+                res_df['model.model']  = res_df['model.model'].apply(lambda x: model_to_str[x])
+                write_results(write_dir, res_df)
+            return res_df
+
 
 
 def evaluate_resumes(agent_list : list[edsl.agents], 
@@ -190,3 +158,32 @@ def test_eval():
     agent_list = [Agent(traits={'role': 'evaluator', 
                                 'persona': 'You are hiring manager at a tech company who wants to a hire a software engineer. You have been given a set of resumes to evaluate.'})]
     return evaluate_resumes(agent_list, model_objs, ['extracted_resumes'])
+
+
+# def update_resumes(agent_list : list[edsl.agents], 
+#                     model_list : list[edsl.language_models],
+#                     model_to_str : dict,
+#                     update_dirs : list[str],
+#                     update_prompt : str = "Improve the following resumes",
+#                     write_dir_suffix = '_updated') -> pd.DataFrame:
+#     '''
+#     Update a resume using the agents and models provided
+#     '''
+#     for d in update_dirs:
+        
+#         if not os.path.exists(d):
+#             raise Exception(f'Directory {d} does not exist')
+#             continue
+
+#         else:
+#             write_dir = f'{d}{write_dir_suffix}'
+
+#             resumes = extract_resumes_from_dir(d)
+#             # Evaluate the resumes where the question name is the filename
+#             update_survey = Survey(questions = [QuestionFreeText(question_name = name, 
+#                                                                   question_text=update_prompt + r_text) for name, r_text in resumes])
+#             results = update_survey.by(agent_list).by(model_list).run()
+#             res_df = results.select("model.model", "answer.*").to_pandas()
+#             res_df['model.model']  = res_df['model.model'].apply(lambda x: model_to_str[x])
+#             write_resumes(write_dir, res_df)
+#     return res_df
