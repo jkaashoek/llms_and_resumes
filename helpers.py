@@ -64,6 +64,17 @@ def extract_resumes_from_dir(resume_dir : str) -> list[list[str, str]]:
                 resumes.append([f[:-4], file.read()])
     return resumes
 
+def extract_resumes_from_dir_list(dir_list : list[str]) -> list[list[str, str]]:
+    '''
+    Extracts the text from a list of directories of resumes.
+    These have to be txt files containing the text extracted from a resume, not PDFs
+    Results is of the form [[filename, text], ...]
+    '''
+    resumes = []
+    for d in dir_list:
+        resumes.extend(extract_resumes_from_dir(d))
+    return resumes
+
 # test_ai_generation()
 # test_update()
 # res_df = test_eval()
