@@ -1,22 +1,9 @@
-import pandas as pd
-import numpy as np
-import edsl
 from edsl.questions import QuestionFreeText, QuestionLinearScale
-from edsl import Agent, Survey, Model
-from helpers import extract_from_pdf, write_results, extract_resumes_from_dir, extract_resumes_from_dir_list
+from edsl import Survey
+from helpers import extract_resumes_from_dir, write_to_dir, extract_resumes_from_dir_list
 from consts import model_to_str
-import os 
-
-
-# Three parts to any experiment
-# Generation 
-# Update
-# Evalute
-# Each should have it's own agent(s), model(s), and instruction(s)
-
-# Features:
-# update_agent, update_models
-# evaluate_agent, evaluate_models 
+import pandas as pd
+import os
 
 class ResumeExperiment:
     def __init__(self, features : dict, expr_dir : str) -> None:
@@ -53,7 +40,7 @@ class ResumeExperiment:
                 results = update_survey.by(self.features['update_agents']).by(self.features['update_models']).run()
                 res_df = results.select("model.model", "answer.*").to_pandas()
                 res_df['model.model']  = res_df['model.model'].apply(lambda x: model_to_str[x])
-                write_results(write_dir, res_df)
+                write_to_dir(write_dir, res_df)
             return res_df
 
     def clean_eval_results(self, res_df : pd.DataFrame) -> pd.DataFrame:
@@ -169,46 +156,46 @@ class ResumeExperiment:
 
 
 # The existing resumes case
-models = Model.available()
-models = models[:1]
-model_strs = ['gpt35']
-model_objs = [Model(model) for model in models]
-model_dict = dict(zip(models, model_strs))
+# models = Model.available()
+# models = models[:1]
+# model_strs = ['gpt35']
+# model_objs = [Model(model) for model in models]
+# model_dict = dict(zip(models, model_strs))
 
-# The variables we need for an experiment
-# Where to write
-expr_dir = 'experiments/test_experiments'
+# # The variables we need for an experiment
+# # Where to write
+# expr_dir = 'experiments/test_experiments'
 
-# The update instructions
-update_instructions = 'You are an experiment resumer writer who has been hired to improve resumes.'
-update_agents = [Agent(traits={'role': 'improver', 
-                                'persona': update_instructions})]
-update_prompt = 'Improve the following resume.'
-update_models = [Model(m) for m in models[:2]] # Just the GPT models
+# # The update instructions
+# update_instructions = 'You are an experiment resumer writer who has been hired to improve resumes.'
+# update_agents = [Agent(traits={'role': 'improver', 
+#                                 'persona': update_instructions})]
+# update_prompt = 'Improve the following resume.'
+# update_models = [Model(m) for m in models[:2]] # Just the GPT models
 
-# The eval instructions
-eval_instructions = 'You are hiring manager at a tech company who wants to a hire a software engineer. You have been given a set of resumes to evaluate.'
-eval_agents = [Agent(traits={'role': 'evaluator',
-                             'person': eval_instructions})]
-eval_prompt = 'Evaluate the following resume on a scale from 1 to 10, where 1 corresponds to the worst possible candidate and 10 corresponds to the best possible candidate.'
-eval_options = list(range(0, 11))
-eval_models = [Model(m) for m in models[:2]]
+# # The eval instructions
+# eval_instructions = 'You are hiring manager at a tech company who wants to a hire a software engineer. You have been given a set of resumes to evaluate.'
+# eval_agents = [Agent(traits={'role': 'evaluator',
+#                              'person': eval_instructions})]
+# eval_prompt = 'Evaluate the following resume on a scale from 1 to 10, where 1 corresponds to the worst possible candidate and 10 corresponds to the best possible candidate.'
+# eval_options = list(range(0, 11))
+# eval_models = [Model(m) for m in models[:2]]
 
-features = {
-    'update_agents': update_agents,
-    'update_models': update_models,
-    'update_prompt': update_prompt,
-    'eval_agents': eval_agents,
-    'eval_models': eval_models,
-    'eval_prompt': eval_prompt,
-    'eval_options': eval_options
-}
+# features = {
+#     'update_agents': update_agents,
+#     'update_models': update_models,
+#     'update_prompt': update_prompt,
+#     'eval_agents': eval_agents,
+#     'eval_models': eval_models,
+#     'eval_prompt': eval_prompt,
+#     'eval_options': eval_options
+# }
 
-# Create the experiment
-experiment = ResumeExperiment(features, expr_dir)
-# experiment.update_resumes(['resumes/extracted_resumes'])
-# experiment.evaluate_resumes(['resumes/extracted_resumes', expr_dir + '/resumes/extracted_resumes_updated'])
-experiment.run_experiment(['resumes/extracted_resumes'])
+# # Create the experiment
+# experiment = ResumeExperiment(features, expr_dir)
+# # experiment.update_resumes(['resumes/extracted_resumes'])
+# # experiment.evaluate_resumes(['resumes/extracted_resumes', expr_dir + '/resumes/extracted_resumes_updated'])
+# experiment.run_experiment(['resumes/extracted_resumes'])
 
 
 

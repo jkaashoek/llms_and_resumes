@@ -34,11 +34,6 @@ def read_template(template_fp):
             new_template.append('{' + part + '}')
         else:
             new_template.append(part)
-
-    print(template_split)
-    
-    # Fill the template
-    # filled_template = template.format(**res_df.iloc[0])
     
     return new_template, params
 

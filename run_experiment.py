@@ -12,19 +12,48 @@
 #     name: python3
 # ---
 
-from helpers import *
+from resume_experiment import ResumeExperiment
+from edsl import Agent, Model
+from consts import model_to_str
+from helpers import write_results, extract_resumes_from_dir, extract_resumes_from_dir_list
 import matplotlib.pyplot as plt
 
-print(Model.available())
-model_dict['gpt-4-1106-preview'] = 'gpt4'
-# model_strs = []
+# +
+models = Model.available()
 
-agent_list = [Agent(traits={'role': 'evaluator', 
-                            'persona': 'You are hiring manager at a tech company who wants to a hire a software engineer. You have been given a set of resumes to evaluate.'})]
-evals = evaluate_resumes(agent_list, [Model('gpt-4-1106-preview'), Model('gpt-3.5-turbo')], ['extracted_resumes', 'extracted_resumes_updated'])
-# evals_gpt35 = evaluate_resumes(agent_list, [Model('gpt-3.5-turbo')], ['extracted_resumes', 'extracted_resumes_updated'])
-print(evals)
-print("Done evaluating")
+# Where to write
+expr_dir = 'experiments/test_experiments'
+
+# The update instructions
+update_instructions = 'You are an experiment resumer writer who has been hired to improve resumes.'
+update_agents = [Agent(traits={'role': 'improver', 
+                                'persona': update_instructions})]
+update_prompt = 'Improve the following resume.'
+update_models = [Model(m) for m in models[:2]] # Just the GPT models
+
+# The eval instructions
+eval_instructions = 'You are hiring manager at a tech company who wants to a hire a software engineer. You have been given a set of resumes to evaluate.'
+eval_agents = [Agent(traits={'role': 'evaluator',
+                             'person': eval_instructions})]
+eval_prompt = 'Evaluate the following resume on a scale from 1 to 10, where 1 corresponds to the worst possible candidate and 10 corresponds to the best possible candidate.'
+eval_options = list(range(0, 11))
+eval_models = [Model(m) for m in models[:3]]
+
+features = {
+    'update_agents': update_agents,
+    'update_models': update_models,
+    'update_prompt': update_prompt,
+    'eval_agents': eval_agents,
+    'eval_models': eval_models,
+    'eval_prompt': eval_prompt,
+    'eval_options': eval_options
+}
+# -
+
+# Create and run 
+experiment = ResumeExperiment(features, expr_dir)
+res_df = experiment.run_experiment(['resumes/extracted_resumes'])
+res_df.head()
 
 
 # +
@@ -46,7 +75,6 @@ def clean_evals(df):
 def add_model_results(df, ax):
     score_no_update = df[df['update_model'] == 'no_update']['score'].values
     score_with_update = df[df['update_model'] != 'no_update']['score'].values
-    # print(score_no_update, score_with_update)
 
     xs = np.arange(len(score_no_update))
     width = 0.2
@@ -56,13 +84,12 @@ def add_model_results(df, ax):
     ax.bar(xs - width/2, score_no_update, width, label='No Update')
     ax.bar(xs + width/2, score_with_update, width, label='With Update')
     ax.set_xticks(xs)
-    ax.set_xticklabels(all_res, rotation=45)
+    ax.set_xticklabels(df, rotation=45)
     ax.set_ylim([0,10])
     ax.legend()
     return ax
     
 def plot_evals(df):
-
     all_res = df['resume'].unique()
     mods = df['eval_model'].unique()
     nmodels = len(mods)
@@ -82,10 +109,11 @@ def plot_evals(df):
 
     plt.show()
         
-    return ax
+    return 
 
-cleaned_evals = clean_evals(evals)
-print(cleaned_evals)
+cleaned_evals = clean_evals(evals.copy())
+plot_evals(cleaned_evals)
+# print(cleaned_evals)
 # ax = plot_evals(cleaned_evals_4)
 # ax.set_title("GPT 4 Evaluator")
 # plt.show()
