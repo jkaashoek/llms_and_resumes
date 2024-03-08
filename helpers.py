@@ -61,7 +61,8 @@ def write_to_dir(write_dir : str, res_df : pd.DataFrame, suffix = False) -> None
 
             # Write
             with open(fname, 'w') as f:
-                f.write(str(row[c]))
+                if ~pd.isna(row[c]):
+                    f.write(str(row[c]))
     return None
 
 def extract_resumes_from_dir_list(dir_list : list[str]) -> list[list[str, str]]:
