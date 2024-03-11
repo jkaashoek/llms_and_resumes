@@ -18,30 +18,24 @@ class ResumeExperiment:
     
     def update_resumes(self, update_dirs, write_dir_suffix = '_updated') -> pd.DataFrame:
         '''
-        TODO: use extract_resumes_from_dir_list function rather than looping
         TODO: update and eval are very similar...  can we combine?
         '''
-        for d in update_dirs:
+        resumes = extract_resumes_from_dir_list(update_dirs)
         
-            if not os.path.exists(d):
-                raise Exception(f'Directory {d} does not exist')
-                continue
+        # This will fail if there are files that have the same name in different directories
+        # are we okay with that? Something to keep in mind at least if we start doing this at scale.
+        write_dir = f'{self.expr_dir}/updated_resumes'
 
-            else:
-                write_dir = f'{self.expr_dir}/{d}{write_dir_suffix}'
-
-                # Reads the txt from resumes into a dataframe
-                resumes = extract_resumes_from_dir(d)
-                # Evaluate the resumes where the question name is the filename
-                update_survey = Survey(questions = [
-                    QuestionFreeText(question_name = name, question_text=self.features['update_prompt'] + r_text) 
-                    for name, r_text in resumes
-                ])
-                results = update_survey.by(self.features['update_agents']).by(self.features['update_models']).run()
-                res_df = results.select("model.model", "answer.*").to_pandas()
-                res_df['model.model']  = res_df['model.model'].apply(lambda x: model_to_str[x])
-                write_to_dir(write_dir, res_df)
-            return res_df
+        # Evaluate the resumes where the question name is the filename
+        update_survey = Survey(questions = [
+            QuestionFreeText(question_name = name, question_text=self.features['update_prompt'] + r_text) 
+            for name, r_text in resumes
+        ])
+        results = update_survey.by(self.features['update_agents']).by(self.features['update_models']).run()
+        res_df = results.select("model.model", "answer.*").to_pandas()
+        res_df['model.model']  = res_df['model.model'].apply(lambda x: model_to_str[x])
+        write_to_dir(write_dir, res_df)
+        return res_df
 
     def clean_eval_results(self, res_df : pd.DataFrame) -> pd.DataFrame:
         # I want a data frame with columns: MODEL, FILE (RESUME), SCORE, COMMENT
@@ -85,3 +79,40 @@ class ResumeExperiment:
         res_df = self.evaluate_resumes(update_dirs + updated_folders)
         res_df.to_csv(f'{self.expr_dir}/results.csv')
         return res_df
+    
+
+# # Example usage
+# from edsl import Agent, Model
+# models = Model.available()
+
+# # Where to write
+# expr_dir = 'experiments/test_experiments'
+
+# # The update instructions
+# update_instructions = 'You are an experiment resume writer who has been hired to improve resumes.'
+# update_agents = [Agent(traits={'role': 'improver', 
+#                                 'persona': update_instructions})]
+# update_prompt = 'Improve the following resume.'
+# update_models = [Model(m) for m in models[:2]] # Just the GPT models
+
+# # The eval instructions
+# eval_instructions = 'You are hiring manager at a tech company who wants to a hire a intro level software engineer. You have been given a set of resumes to evaluate.'
+# eval_agents = [Agent(traits={'role': 'evaluator',
+#                              'person': eval_instructions})]
+# eval_prompt = 'Evaluate the following resume on a scale from 1 to 10, where 1 corresponds to the worst possible candidate and 10 corresponds to the best possible candidate'
+# eval_options = list(range(0, 11))
+# eval_models = [Model(m) for m in models[:2]]
+
+# features = {
+#     'update_agents': update_agents,
+#     'update_models': update_models,
+#     'update_prompt': update_prompt,
+#     'eval_agents': eval_agents,
+#     'eval_models': eval_models,
+#     'eval_prompt': eval_prompt,
+#     'eval_options': eval_options
+# }
+
+# # Create the experiment
+# exp = ResumeExperiment(features, expr_dir)
+# exp.update_resumes(['resumes/extracted_resumes', 'experiments/test_experiments_2/resumes/extracted_resumes_updated'])
