@@ -23,11 +23,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 model_strs = model_to_str.values()
-# print(model_strs)
+print(model_strs)
+print(model_to_str.keys())
 
 # +
-models = Model.available()
-
+# models = Model.available()
+models = ['gpt-3.5-turbo', 'gpt-4-1106-preview', 'llama-2-70b-chat-hf', 'mixtral-8x7B-instruct-v0.1']
 # Where to write
 expr_dir = 'experiments/test_experiments'
 
@@ -36,15 +37,17 @@ update_instructions = 'You are an experiment resume writer who has been hired to
 update_agents = [Agent(traits={'role': 'improver', 
                                 'persona': update_instructions})]
 update_prompt = 'Improve the following resume.'
-update_models = [Model(m) for m in models[:2]] # Just the GPT models
+update_models = [Model(m) for m in models] # Just the GPT models
 
 # The eval instructions
 eval_instructions = 'You are hiring manager at a tech company who wants to a hire a intro level software engineer. You have been given a set of resumes to evaluate.'
 eval_agents = [Agent(traits={'role': 'evaluator',
                              'person': eval_instructions})]
 eval_prompt = 'Evaluate the following resume on a scale from 1 to 10, where 1 corresponds to the worst possible candidate and 10 corresponds to the best possible candidate'
-eval_options = list(range(0, 21))
-eval_models = [Model(m) for m in models[:2]]
+eval_options = list(range(0, 11))
+eval_models = [Model(m) for m in models]
+
+# print(models)
 
 features = {
     'update_agents': update_agents,
@@ -87,7 +90,7 @@ def clean_evals(df):
 
 def add_model_results(df, ax):
     nupdates = df['update_model'].nunique()
-    width = 0.2
+    width = 0.1
     for i, m in enumerate(df['update_model'].unique()):
         updated = df[df['update_model'] == m].sort_values(by='resume')
         xs = np.arange(len(updated))
@@ -96,7 +99,7 @@ def add_model_results(df, ax):
 
     ax.set_xticks(xs)
     ax.set_xticklabels(rnames, rotation=45)
-    ax.set_ylim([0,100])
+    ax.set_ylim([0,10])
     ax.legend()
     return ax
     
@@ -111,7 +114,7 @@ def plot_evals(df):
         ncols = 3
     
     nrows = int(np.ceil(nmodels/ncols))
-    f, axs = plt.subplots(nrows=nrows, ncols=ncols, figsize=(10, 5))
+    f, axs = plt.subplots(nrows=nrows, ncols=ncols, figsize=(25, 25))
     axs = axs.flatten()
     for i, m in enumerate(df['eval_model'].unique()):
         ax = axs[i]
@@ -141,7 +144,7 @@ update_instructions = 'You are an experiment resume writer who has been hired to
 update_agents = [Agent(traits={'role': 'improver', 
                                 'persona': update_instructions})]
 update_prompt = 'Improve the following resume. You should output the entire resumes with your changes and improvements. Do not include anything in your output other than the resume.'
-update_models = [Model(m) for m in models[:2]] # Just the GPT models
+update_models = [Model(m) for m in models] # Just the GPT models
 
 # The eval instructions
 eval_instructions = 'You are hiring manager at a tech company who wants to a hire a intro level software engineer. You have been given a set of resumes to evaluate.'
@@ -149,7 +152,7 @@ eval_agents = [Agent(traits={'role': 'evaluator',
                              'person': eval_instructions})]
 eval_prompt = 'Evaluate the following resume on a scale from 1 to 10, where 1 corresponds to the worst possible candidate and 10 corresponds to the best possible candidate.'
 eval_options = list(range(0, 11))
-eval_models = [Model(m) for m in models[:2]]
+eval_models = [Model(m) for m in models]
 
 features = {
     'update_agents': update_agents,
