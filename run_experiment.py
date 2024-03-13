@@ -43,7 +43,7 @@ eval_instructions = 'You are hiring manager at a tech company who wants to a hir
 eval_agents = [Agent(traits={'role': 'evaluator',
                              'person': eval_instructions})]
 eval_prompt = 'Evaluate the following resume on a scale from 1 to 10, where 1 corresponds to the worst possible candidate and 10 corresponds to the best possible candidate'
-eval_options = list(range(0, 11))
+eval_options = list(range(0, 21))
 eval_models = [Model(m) for m in models[:2]]
 
 features = {

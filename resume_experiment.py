@@ -34,12 +34,7 @@ class ResumeExperiment:
         results = update_survey.by(self.features['update_agents']).by(self.features['update_models']).run()
         res_df = results.select("model.model", "answer.*").to_pandas()
         res_df['model.model']  = res_df['model.model'].apply(lambda x: model_to_str[x])
-        # Sometimes the models return a _comment column, which we don't want
-        drop_cols = [c for c in res_df.columns if c.find('comment') != -1]
-        print(res_df)
-        for c in res_df.columns: print(c)
-        print("Drop cols", drop_cols)
-        # write_to_dir(write_dir, res_df)
+        write_to_dir(write_dir, res_df)
         return res_df
 
     def clean_eval_results(self, res_df : pd.DataFrame) -> pd.DataFrame:
@@ -86,39 +81,38 @@ class ResumeExperiment:
         return res_df
     
 
-# Example usage
-from edsl import Agent, Model
-models = Model.available()
+# # Example usage
+# from edsl import Agent, Model
+# models = Model.available()
 
-# Where to write
-expr_dir = 'experiments/test_experiments'
+# # Where to write
+# expr_dir = 'experiments/test_experiments'
 
-# The update instructions
-update_instructions = 'You are an experiment resume writer who has been hired to improve resumes.'
-update_agents = [Agent(traits={'role': 'improver', 
-                                'persona': update_instructions})]
-update_prompt = 'Improve the following resume.'
-update_models = [Model(m) for m in models[4:5]] # Just the GPT models
+# # The update instructions
+# update_instructions = 'You are an experiment resume writer who has been hired to improve resumes.'
+# update_agents = [Agent(traits={'role': 'improver', 
+#                                 'persona': update_instructions})]
+# update_prompt = 'Improve the following resume.'
+# update_models = [Model(m) for m in models[:2]] # Just the GPT models
 
-# The eval instructions
-eval_instructions = 'You are hiring manager at a tech company who wants to a hire a intro level software engineer. You have been given a set of resumes to evaluate.'
-eval_agents = [Agent(traits={'role': 'evaluator',
-                             'person': eval_instructions})]
-eval_prompt = 'Evaluate the following resume on a scale from 1 to 10, where 1 corresponds to the worst possible candidate and 10 corresponds to the best possible candidate'
-eval_options = list(range(0, 11))
-eval_models = [Model(m) for m in models[3:4]]
+# # The eval instructions
+# eval_instructions = 'You are hiring manager at a tech company who wants to a hire a intro level software engineer. You have been given a set of resumes to evaluate.'
+# eval_agents = [Agent(traits={'role': 'evaluator',
+#                              'person': eval_instructions})]
+# eval_prompt = 'Evaluate the following resume on a scale from 1 to 10, where 1 corresponds to the worst possible candidate and 10 corresponds to the best possible candidate'
+# eval_options = list(range(0, 11))
+# eval_models = [Model(m) for m in models[:2]]
 
-features = {
-    'update_agents': update_agents,
-    'update_models': update_models,
-    'update_prompt': update_prompt,
-    'eval_agents': eval_agents,
-    'eval_models': eval_models,
-    'eval_prompt': eval_prompt,
-    'eval_options': eval_options
-}
+# features = {
+#     'update_agents': update_agents,
+#     'update_models': update_models,
+#     'update_prompt': update_prompt,
+#     'eval_agents': eval_agents,
+#     'eval_models': eval_models,
+#     'eval_prompt': eval_prompt,
+#     'eval_options': eval_options
+# }
 
-# Create the experiment
-print(update_models)
-exp = ResumeExperiment(features, expr_dir)
-exp.update_resumes(['resumes/extracted_resumes'])
+# # Create the experiment
+# exp = ResumeExperiment(features, expr_dir)
+# exp.update_resumes(['resumes/extracted_resumes', 'experiments/test_experiments_2/resumes/extracted_resumes_updated'])
