@@ -16,11 +16,12 @@ class ResumeExperiment:
             self.features[k] = v
         return
     
-    def update_resumes(self, update_dirs, write_dir_suffix = '_updated') -> pd.DataFrame:
+    def update_resumes(self, update_dirs, resumes = None, write_dir_suffix = '_updated') -> pd.DataFrame:
         '''
         TODO: update and eval are very similar...  can we combine?
         '''
-        resumes = extract_resumes_from_dir_list(update_dirs)
+        if resumes is None:
+            resumes = extract_resumes_from_dir_list(update_dirs)
         
         # This will fail if there are files that have the same name in different directories
         # are we okay with that? Something to keep in mind at least if we start doing this at scale.
@@ -62,8 +63,9 @@ class ResumeExperiment:
                                         'data': 'resume', 'answer_score': 'score', 'answer_comment': 'comment'}))
         return cleaned_res
     
-    def evaluate_resumes(self, eval_dirs : list[str]) -> pd.DataFrame:
-        resumes = extract_resumes_from_dir_list(eval_dirs)
+    def evaluate_resumes(self, eval_dirs : list[str], resumes = None) -> pd.DataFrame:
+        if resumes is None:
+            resumes = extract_resumes_from_dir_list(eval_dirs)
         # Evaluate the resumes where the question name is the filename
         eval_survey = Survey(questions = [QuestionLinearScale(question_name = name, 
                                                         question_text=self.features['eval_prompt'] + r_text, 
