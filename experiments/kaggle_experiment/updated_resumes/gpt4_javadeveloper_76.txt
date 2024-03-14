@@ -1,36 +1,33 @@
 Skills
-- Programming Languages: Proficient in Java; familiar with C++, Python, JavaScript, and Ruby
+
+- Programming Languages: Proficient in Java; familiar with Advanced Java concepts
 - Operating Systems: Experienced with Windows and Linux (CentOS 6.6)
 - Databases: Knowledgeable in Oracle, MySQL, and Derby (Embedded DB)
-- Integrated Development Environment (IDE): Skilled in using Eclipse (Oxygen)
-- Tools: Proficient with SonarQube, experienced with Putty
-- Version Control: Familiar with Git
-
-Responsibilities
-- Actively participated in requirements gathering and design development sessions to ensure clear understanding of project objectives
-- Conducted thorough code reviews and performed debugging tasks to enhance application performance
-- Worked closely with system partners to finalize designs and verify requirements, ensuring alignment with project goals
-- Delivered on all production work orders, consistently meeting deadlines and project requirements
-- Collaborated with fellow developers to reduce software bugs, providing maintenance and development of bug fixes and updates for existing applications
-
-Education
-- Bachelor of Engineering (Computer Science), Savitribai Phule Pune University
+- Integrated Development Environments (IDE): Skilled in using Eclipse (Oxygen)
+- Tools: Competent with SonarQube for code quality analysis; proficient with SSH client Putty
 
 Professional Experience
-Java Developer, Aurus Tech Pvt. Ltd
-- Duration: 2 years
-- Key Contributions: Developed and maintained payment gateway solutions, focusing on Core Java
-- Teamwork: Excelled in a multicultural team environment, contributing to a cooperative and productive work atmosphere
 
-Skill Details
-- Java: 32 months of experience
-- Linux: 6 months of experience
-- Advanced Java: Less than 1 year
-- Derby: Less than 1 year
-- Oracle: Less than 1 year
+Java Developer
+Aurus Tech Pvt. Ltd
 
-Company Details
-- Aurus Tech Pvt. Ltd
-- Role: Java Developer
-- Experience: 2 years
-- Description: Gained valuable experience in payment gateway solutions, emphasizing Core Java development and team collaboration
+- Engaged actively in requirements gathering and design development sessions to ensure clear understanding of project objectives
+- Performed code reviews and conducted debugging to enhance application performance, adhering to best practices in software development
+- Liaised with system partners to finalize design specifications and confirm project requirements, ensuring alignment with business goals
+- Delivered all assigned tasks within established timelines, contributing to the reliable performance of production systems
+- Collaborated with a team of developers to reduce software bugs, providing maintenance and development of bug fixes and updates for existing applications
+
+Education
+
+Bachelor of Engineering (Computer Engineering)
+Savitribai Phule Pune University
+
+Additional Information
+
+- 32 months of experience with Java development, with a focus on payment gateway solutions
+- Exposure to Linux-based environments for 6 months, enhancing system-level understanding
+- Gained practical experience with Advanced Java, Oracle, and Derby databases for less than a year, expanding technical skillset
+
+- Demonstrated ability to work effectively in multicultural teams, showcasing strong communication and teamwork skills
+
+Note: The resume has been reformatted and rephrased for clarity and to better match the job posting requirements. It is important to maintain a consistent format and avoid using special characters that may not display correctly. The experience section has been restructured to emphasize results and teamwork.

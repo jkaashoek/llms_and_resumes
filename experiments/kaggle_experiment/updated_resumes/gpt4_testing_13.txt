@@ -1,40 +1,49 @@
 John Doe
-123 Your Street, City, State, 12345 | (123) 456-7890 | email@example.com
+123 Your Street, City, State, Zip Code
+Phone: (123) 456-7890
+Email: john.doe@email.com
 
-PROFESSIONAL SUMMARY
-Detail-oriented and motivated engineer with a Bachelor’s degree in Computer Science from Pune University. Proficient in a wide range of programming and engineering software, with a focus on quality control and software development. Adept at designing and implementing efficient solutions to complex problems, leveraging strong analytical and troubleshooting skills. Seeking to contribute to innovative projects at Acme as an Entry-Level Software Engineer.
+Objective:
+Recent BE graduate with a strong foundation in software development and computer science principles, seeking to leverage my technical skills and innovative thinking as an Entry-Level Software Engineer at Acme. Eager to apply my knowledge in real-world applications and contribute to the success of transformative projects.
 
-TECHNICAL SKILLS
-- Programming Languages: C, Java (basic knowledge), Python (basic knowledge)
-- Software: MS Office Suite, MATLAB, Keil, LaTeX
-- Web Technologies: HTML, CSS (basic knowledge), JavaScript (basic knowledge)
-- Tools: Git (version control, basic knowledge), Proteus (PCB Design), Multisim, Microwind
-- Other: Strong understanding of Internet Fundamentals, both software and hardware components
-
-PROJECT EXPERIENCE
-- Speed Control of DC Motor Using Heart Beats (Diploma Project): Developed a system to adjust the speed of a DC motor in response to real-time heart rate data.
-- Water Gardening System Using Solar Panel (Mini Project): Designed an eco-friendly, solar-powered watering system for gardens.
-- Iris Recognition System (Final Year BE Project): Implemented a biometric recognition system using image processing techniques and pattern recognition.
-
-WORK EXPERIENCE
-Quality Engineer | Matrix Technologies | Dates of Employment
-- Ensured the quality and reliability of software and hardware products.
-- Conducted thorough testing and validation of electronic components and systems.
-
-Quality Engineer | RB Electronics | Dates of Employment
-- Developed and maintained quality assurance protocols.
-- Collaborated with cross-functional teams to identify and resolve quality-related issues.
-
-EDUCATION
-Bachelor of Engineering (BE) in Computer Science, January 2016
+Education:
 Pune University, Pune, Maharashtra
+Bachelor of Engineering (BE) in Computer Science, January 2016
 
-Secondary School Certificate (SSC), January 2010
 Maharashtra Board
+Secondary School Certificate (SSC), January 2010
 
-ADDITIONAL INFORMATION
-- Eagerness to learn and continuously develop professional skills.
-- Excellent problem-solving abilities and attention to detail.
-- Effective team player with clear communication skills.
-- Exposure to Agile and Scrum methodologies through academic projects.
+Technical Skills:
+- Programming Languages: C, Java (Basic knowledge)
+- Software Development: Keil, MATLAB
+- Web Development: Basic understanding of HTML, CSS, and JavaScript
+- Software Design: Familiarity with data structures, algorithms, and software design principles
+- Tools: MS Office Suite, LaTeX, Basic Internet Fundamentals
+- PCB Design: Experience with Protius and Multisim
+- Simulation Software: Micro wind
 
+Projects:
+- Diploma Project: 'Speed Control of DC Motor Using Heart Beats' – Developed a system to control the speed of a DC motor using heartbeat sensor data.
+- Mini Project: 'Water Gardening System Using Solar Panel' – Designed and implemented an eco-friendly water system for gardens powered by solar energy.
+- Final Year BE Project: 'Iris Recognition System' – Created a security solution using iris recognition technology to accurately identify individuals.
+
+Professional Experience:
+Quality Engineer, Matrix Technologies, [Start Date] - [End Date]
+- Conducted quality assurance testing and troubleshooting for software applications.
+- Collaborated with development teams to enhance product quality and performance.
+
+Quality Engineer, RB Electronics, [Start Date] - [End Date]
+- Assisted in the design and implementation of hardware systems.
+- Ensured compliance with industry quality standards and best practices.
+
+Certifications & Training:
+- Completed a 6-month internship focusing on MATLAB applications.
+- Gained 6 months of hands-on experience with PCB and PCB Design.
+
+Additional Information:
+- Excellent problem-solving skills and attention to detail.
+- Strong communication and teamwork abilities.
+- Committed to continuous learning and professional development.
+
+References:
+Available upon request.
