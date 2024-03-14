@@ -1,0 +1,51 @@
+Evan Exercise
+
+dmexercise@uofga.edu | (706) 542-5555 | @evanworksout
+
+OBJECTIVE
+To secure the Entry-Level Software Engineer position at Acme, leveraging my strong foundation in software development, passion for technology, and research experience to contribute to innovative software solutions.
+
+EDUCATION
+University of Georgia, Athens, GA
+Bachelor of Science in Computer Science, Expected May 2023
+GPA: 3.80/4.00
+
+TECHNICAL SKILLS
+Programming Languages: Proficient in Java, C++, and Python; familiar with JavaScript, HTML, CSS
+Development Tools: Experience with Git version control, Agile and Scrum methodologies
+Projects: Developed a web-based application using React for front-end and integrated RESTful APIs
+
+EXPERIENCE
+Software Development Intern, Tech Innovations Inc., Athens, GA
+June 2022 - August 2022
+- Collaborated with a team of developers to design and implement new features for an internal project management tool using Java and Spring Boot.
+- Participated in code reviews, adhering to best practices to maintain a high standard of code quality.
+- Assisted in troubleshooting and debugging issues, improving system stability by 15%.
+
+Research Assistant, Non-Invasive Exercise Muscle Physiology Lab, Athens, GA
+August 2022 – Present
+- Utilized Python for data analysis and visualization to study the impact of activity on muscle blood flow.
+- Engaged in software development for laboratory equipment control and automation.
+
+LEADERSHIP EXPERIENCE
+President, UGA Sport Management Club, Athens, GA
+January 2022 - Present
+- Spearheaded the development of a club website to enhance member engagement and online presence.
+
+ADDITIONAL EXPERIENCE
+Athens Sports Care Center and Rehab, Athens, GA
+Rehabilitation Aide, August 2021 - May 2022
+- Developed a patient database using MySQL to streamline the tracking of patient progress.
+
+VOLUNTEER WORK
+Basketball Camp Coach/Coordinator, Athens-Clarke County Parks and Recreation, Athens, GA
+May-July, 2021 - 2022
+
+ACADEMIC PROJECTS
+Senior Capstone Project, University of Georgia
+- Leading a team of four students to build a cross-platform mobile application using Flutter and Dart.
+
+WHY ME
+- A quick learner with a solid foundation in software engineering principles, eager to apply my skills to real-world projects.
+- Demonstrated leadership and teamwork abilities, with a proven track record of delivering results in collaborative settings.
+- Committed to continuous professional development and staying current with the latest industry trends and technologies.

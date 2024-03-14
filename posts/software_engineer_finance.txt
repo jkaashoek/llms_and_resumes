@@ -1,0 +1,44 @@
+### Job Title: Entry-Level Software Engineer (Fintech)
+
+### Location: Remote
+
+### About Acme:
+Acme is at the forefront of financial technology, dedicated to transforming the financial landscape through innovative software solutions. Our mission is to make financial services more accessible, efficient, and secure for everyone. We are a rapidly growing team of technologists, financiers, and problem-solvers committed to excellence, innovation, and the power of technology to drive positive financial change.
+
+### Position Overview:
+We're on the lookout for an ambitious and detail-oriented Entry-Level Software Engineer to join our dynamic fintech team. The ideal candidate will bring a strong foundational knowledge in software development combined with a keen interest in financial technologies. This role offers an exceptional opportunity to develop your technical skills in a collaborative environment while contributing to projects that have a real-world impact on financial services.
+
+### Responsibilities:
+- Develop and maintain scalable financial software solutions, working across the full technology stack.
+- Collaborate with cross-functional teams to identify and implement innovative features that meet our users' financial needs.
+- Participate in code reviews, adhering to high standards of quality and best practices in software development.
+- Contribute to the analysis, design, and development of financial models and algorithms.
+- Ensure the reliability and security of our financial software through rigorous testing and maintenance.
+- Stay updated with the latest trends and technologies in the fintech space and suggest improvements to our processes and technologies.
+
+### Qualifications:
+- Bachelor’s degree in Computer Science, Engineering, or a related field, or equivalent practical experience.
+- Proficiency in at least one programming language such as Java, C++, Python, JavaScript, or Ruby.
+- Solid understanding of computer science fundamentals, including data structures, algorithms, and software design principles.
+- Interest or experience in finance, banking, or financial technologies is a plus.
+- Excellent problem-solving skills and attention to detail.
+- Ability to work effectively in a team environment and communicate clearly.
+
+### Preferred Skills:
+- Familiarity with financial models and algorithms.
+- Experience with version control systems, preferably Git.
+- Knowledge of web development technologies (HTML, CSS, JavaScript, and frameworks such as React or Angular) is beneficial.
+- Internship, project, or work experience in software development within the financial sector is highly desirable.
+- Eagerness to learn and adapt to new technologies and frameworks in the fintech industry.
+
+### Why Join Acme:
+- Competitive salary and benefits package, including stock options.
+- Opportunity to be at the cutting edge of fintech innovations.
+- A culture that values creativity, continuous learning, and individual growth.
+- Access to mentorship and career development in both technology and finance.
+- Flexible working hours and remote work options to support work-life balance.
+
+### How to Apply:
+Please submit your resume, a cover letter detailing your interest in fintech and your fit for the role, and any relevant project or portfolio links to [Application Email/Link]. 
+
+Acme is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees.

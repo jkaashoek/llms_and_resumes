@@ -1,0 +1,59 @@
+Tony Technology
+Email: tote@uofga.edu | Phone: (706) 123-4567 | Portfolio: tonytechcomputerscience.com | GitHub: [GitHub Link]
+
+PROFESSIONAL SUMMARY
+Detail-oriented Computer Science graduate with a strong foundation in software development and project management. Adept in team leadership and an effective communicator, with a proven track record of managing technology projects in nonprofit and financial sectors. Passionate about leveraging technical skills to innovate and improve financial software solutions.
+
+EDUCATION
+University of Georgia, School of Computing, Athens, GA
+Bachelor of Science in Computer Science, Emphasis in Software Design, May 2023
+Major GPA: 3.84/4.00
+
+RELEVANT COURSEWORK
+- Software Engineering
+- Mobile Software Development
+- Simulation and Modeling
+- Database Management
+- Compilers
+
+TECHNICAL SKILLS
+- Programming Languages: Java, C++, C, SQL, Visual Basic
+- Operating Systems: Linux, UNIX, Windows
+- Databases: Oracle, SQL Server, MS Access
+- Tools: Git, React, Angular (Basic), JCL, DB2, MS Office Suite, Zoom
+
+PROFESSIONAL EXPERIENCE
+UGA Computer Science Department, Athens, GA
+Blog Writer, August 2022 - Present
+- Compose and publish articles on industry trends, interviewing faculty and professionals.
+- Developed a web portal for student access to departmental resources.
+
+Financial Network Services, Pty Ltd., Remote
+Unix Administrator Assistant, June 2021 - August 2021
+- Managed file transfers and software configurations for international consulting projects.
+- Led a team to support infrastructure for Unix-based systems.
+
+PROJECT EXPERIENCE
+Athens Area Humane Society, Web Developer, January 2022 - May 2022
+- Led the development of a database and user interface for animal adoption tracking.
+- Integrated Java, HTML, and Flash to create an interactive website.
+
+LEADERSHIP EXPERIENCE
+Pi Kappa Alpha Fraternity, Alpha Mu Chapter, Athens, GA
+Risk Manager, September 2020 - Present
+- Enforce compliance with safety regulations, conduct educational programs.
+
+Treasurer, September 2019 - May 2020
+- Managed a budget over $55,000, overseeing transactions and fund allocation.
+
+ADDITIONAL EXPERIENCE
+Self-Employed Lawn Service, Roswell, GA
+Entrepreneur, Summers 2017 - 2019
+- Founded and operated a lawn care business, managing sales and customer relations.
+
+ADDITIONAL INFORMATION
+- Interest in fintech and experience in financial software development.
+- Eagerness to learn and apply new technologies in the fintech industry.
+- Excellent problem-solving abilities and attention to detail.
+
+Please note: GitHub link to be provided upon request.

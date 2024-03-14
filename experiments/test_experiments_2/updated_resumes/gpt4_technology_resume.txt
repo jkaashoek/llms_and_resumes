@@ -1,0 +1,71 @@
+Tony Technology
+
+Email: tote@uofga.edu
+Phone: (706) 123-4567
+Portfolio: tonytechcomputerscience.com
+GitHub: [Provided upon request]
+
+PROFESSIONAL SUMMARY
+
+- Project management professional with a focus on non-profit sector and a proven track record in troubleshooting and strategic planning.
+- Proficient in client business process analysis and adept at developing and executing operational strategies.
+- Strong leadership and team-building skills, with a history of managing successful teams.
+
+EDUCATION
+
+University of Georgia, School of Computing, Athens, GA
+Bachelor of Science in Computer Science, May 2023
+Emphasis in Software Design
+Major GPA: 3.84/4.00
+
+RELEVANT COURSEWORK
+
+- Software Engineering
+- Mobile Software Development
+- Simulation and Modeling
+- Database Management
+- Compilers
+
+TECHNICAL SKILLS
+
+Programming Languages: Visual Basic, SQL, C, C++, Java
+Operating Systems: Windows, Linux, Unix
+Databases: SQL Server, MS Access, Oracle
+Software: JCL, SQL, DB2, MS Office Suite (Teams, Excel, Word), Zoom
+
+PROFESSIONAL EXPERIENCE
+
+UGA Computer Science Department, Athens, GA
+Blog Writer, August 2022 - Present
+- Compose and publish 5+ monthly blog posts on industry trends, conducting interviews with faculty, staff, and employers for content.
+- Designed and implemented a student portal for accessing blogs, research articles, and internal communications.
+
+Financial Network Services, Pty Ltd., Remote
+Unix Administrator Assistant, June 2021 - August 2021
+- Managed Unix HP-UX 11i systems for file transfers between development and testing environments.
+- Led a 4-person team in configuring and installing software for overseas consultants.
+- Handled the creation of user accounts and managed permissions and passwords on UNIX-SCO systems.
+
+PROJECT EXPERIENCE
+
+Athens Area Humane Society, Web Programmer, January 2022 - May 2022
+- Led a project team to develop a database for tracking animal adoptions.
+- Developed a new user interface using Visual Basic.
+- Enhanced website interactivity using Java, HTML, and Flash for aahumane.gov.
+
+ADDITIONAL EXPERIENCE
+
+Pi Kappa Alpha Fraternity, Alpha Mu Chapter, Athens, GA
+Risk Manager, September 2020 - Present
+- Oversee adherence to campus and chapter safety regulations for 85 members.
+- Address regulation breaches and enforce disciplinary measures.
+- Organize bi-semester educational programs on risk prevention.
+
+Treasurer, September 2019 - May 2020
+- Managed and allocated a budget exceeding $55,000.
+- Conducted all financial transactions ensuring accurate account management.
+
+Self-Employed Lawn Service, Roswell, GA
+Lawn Maintenance Entrepreneur, Summers 2017 - 2019
+- Founded and operated a lawn care business, handling marketing, sales, and financial operations.
+- Consistently maintained a client base of 75 households.

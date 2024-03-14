@@ -1,0 +1,40 @@
+### Job Title: Entry-Level Software Engineer
+
+### Location: Remote
+
+### About Us:
+Acme is dedicated to transforming ideas into reality through innovative software solutions. We are a team of passionate technologists, creators, and problem-solvers committed to excellence and continuous learning. Join us to be a part of something truly groundbreaking.
+
+### Position Overview:
+We're seeking a highly motivated and detail-oriented Entry-Level Software Engineer to join our dynamic team. The ideal candidate will have a strong foundational knowledge in software development and a passion for technology. This is an incredible opportunity to grow your skills in a hands-on, collaborative environment while contributing to exciting projects that impact our users.
+
+### Responsibilities:
+- Assist in the development and maintenance of our software products, working across the full technology stack.
+- Participate in code reviews and adhere to best practices in software development.
+- Collaborate with cross-functional teams to define, design, and ship new features.
+- Troubleshoot, test, and maintain the core product software to ensure strong optimization and functionality.
+- Contribute to the continuous improvement of our development processes.
+- Engage in learning and development opportunities to stay abreast of the latest technologies and best practices in software engineering.
+
+### Qualifications:
+- Bachelor’s degree in Computer Science, Engineering, or a related field, or equivalent practical experience.
+- Proficiency in at least one programming language such as Java, C++, Python, JavaScript, or Ruby.
+- Strong understanding of computer science fundamentals, including data structures, algorithms, and software design principles.
+- Familiarity with software development methodologies (e.g., Agile, Scrum).
+- Excellent problem-solving skills and attention to detail.
+- Ability to work effectively in a team environment and communicate clearly.
+
+### Preferred Skills:
+- Experience with version control systems, preferably Git.
+- Exposure to web development technologies (HTML, CSS, JavaScript, and frameworks such as React or Angular) is a plus.
+- Internship or project experience in software development is highly desirable.
+- Eagerness to learn and embrace new technologies and frameworks.
+
+### Why Join Us:
+- Competitive salary and benefits package.
+- Vibrant and inclusive company culture that values diversity and creativity.
+- Comprehensive onboarding and ongoing training programs to support your professional growth.
+- Opportunity to work on cutting-edge technologies and transformative projects.
+- Flexible working hours and remote work options to support work-life balance.
+
+ACME is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees.

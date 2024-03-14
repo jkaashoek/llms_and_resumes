@@ -1,0 +1,47 @@
+Tony Technology
+tote@uofga.edu • (706) 123-4567 • www.tonytechcomputerscience.com • GitHub: github.com/tonytech
+
+PROFESSIONAL SUMMARY
+Detail-oriented Computer Science graduate with a strong foundation in software development and project management. Proven ability to troubleshoot complex issues, understand client business processes, and effectively lead teams. Adept in a range of programming languages and development tools, with a passion for continuous learning and technology innovation.
+
+EDUCATION
+University of Georgia, School of Computing, Athens, GA
+Bachelor of Science in Computer Science, Emphasis in Software Design, May 2023
+Major GPA: 3.84/4.00
+Relevant Coursework: Software Engineering, Mobile Software Development, Simulation and Modeling, Database Management, Compilers
+
+TECHNICAL SKILLS
+Programming Languages: Java, C++, C, SQL, Visual Basic
+Operating Systems: Linux, Unix, Windows
+Databases: Oracle, SQL Server, MySQL, MS Access
+Tools & Software: Git, React, Angular, HTML, CSS, JavaScript, MS Office Suite, Zoom
+
+PROFESSIONAL EXPERIENCE
+UGA Computer Science Department, Athens, GA
+Blog Writer, August 2022 - Present
+- Compose and publish 5+ monthly blog posts on industry trends, interviews, and technological advancements.
+- Spearheaded the design of a student portal for enhanced access to academic resources.
+
+Financial Network Services, Pty Ltd., Remote
+Unix Administrator Assistant, June 2021 - August 2021
+- Managed file transfers and software installations across development and testing environments.
+- Led a team to configure and deploy systems for international consultants, enhancing global collaboration.
+
+PROJECT EXPERIENCE
+Athens Area Humane Society, Athens, GA
+Web Programmer, January 2022 - May 2022
+- Directed a project to develop a database and user interface for tracking animal adoptions.
+- Integrated Java, HTML, and Flash to create an interactive and user-friendly website.
+
+LEADERSHIP EXPERIENCE
+Pi Kappa Alpha Fraternity, Alpha Mu Chapter, Athens, GA
+Risk Manager, September 2020 - Present
+- Enforce safety protocols and educational programs for 85 fraternity members to minimize risks.
+
+Treasurer, September 2019 - May 2020
+- Managed a $55,000+ budget, ensuring accurate financial operations and fund allocation.
+
+ADDITIONAL EXPERIENCE
+Self-Employed Lawn Service, Roswell, GA
+Entrepreneur, Summers 2017 - 2019
+- Founded a lawn care business, handling marketing, sales, and financial management for a 75-home customer base.

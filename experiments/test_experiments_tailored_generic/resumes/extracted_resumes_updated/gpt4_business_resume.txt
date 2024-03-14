@@ -1,0 +1,52 @@
+Becky Business
+Athens, GA 30602 | BeckyB@uofga.edu | (706) 555-4321 | linkedin.com/in/becky-business
+
+EDUCATION
+University of Georgia, Athens, GA
+Bachelor of Science in Computer Science, Minor in Spanish | Expected May 2024
+Presidential Scholar (2 Semesters), Dean’s List (2 Semesters), GPA: 3.65/4.00
+
+Georgia State University, Atlanta, GA
+Core Curriculum | August 2020 - May 2021
+
+TECHNICAL SKILLS
+Programming Languages: Java, Python, JavaScript
+Web Development: HTML, CSS, basic React and Angular
+Tools & Technologies: Git, Agile methodology, Microsoft Office Suite
+Languages: Spanish (Conversational; Proficient in Writing)
+
+SOFTWARE ENGINEERING PROJECTS
+University of Georgia
+• Collaborated on a team of 5 to develop a Java-based inventory management system, implementing data structures and algorithms to optimize performance.
+• Designed and built a responsive personal portfolio website using HTML, CSS, and JavaScript; integrated with a backend in Python.
+
+INTERNSHIPS
+Marketing Intern | Georgia Department of Labor, Atlanta, GA | May 2021 - July 2022
+• Analyzed marketing strategies, improving outreach by adapting techniques to target demographics, resulting in a 15% increase in applicant engagement.
+
+UGA Intern for a Day Program | Altria, Atlanta, GA | November 2021
+• Engaged in sales strategy sessions and shadowed customer product calls, gaining insights into client relationship management and software solutions.
+
+PROFESSIONAL EXPERIENCE
+Server | Olive Garden, Athens, GA | August 2021 - Present
+• Excelled in a fast-paced environment, providing top-tier customer service and managing financial transactions for up to 50+ patrons per shift.
+
+Assistant Store Manager | The Body Shop, Atlanta, GA | August 2020 - December 2020
+• Led a team of 6, driving sales performance and overseeing daily operations, including financial management and customer service initiatives.
+
+LEADERSHIP & COMMUNITY INVOLVEMENT
+Chairman of Advertising/Public Relations | American Red Cross, Athens, GA | January 2022 - May 2022
+• Directed a 6-member committee in a strategic outreach campaign, securing first-time media coverage from four outlets and enhancing public relations.
+
+Tutor | ESOL Service Learning, Athens, GA | August 2022 - Present
+• Provide English language instruction to elementary students, fostering an inclusive and supportive learning environment.
+
+Volunteer | Habitat for Humanity Thrift Store, Athens, GA | August 2021 - Present
+• Contribute to community development by organizing and restocking donated items to support affordable housing initiatives.
+
+Assistant to Financial Director | Infusion Magazine, Athens, GA | August 2021 - August 2022
+• Supported financial operations for a multicultural magazine, enhancing the platform for minority student voices.
+
+EXTRACURRICULAR ACTIVITIES
+• Active member of the University of Georgia Coding Bootcamp, completing projects in web development and software engineering.
+• Participated in hackathons, gaining experience in collaborative problem-solving and rapid prototype development.

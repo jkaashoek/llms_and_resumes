@@ -1,0 +1,54 @@
+Evan Exercise
+
+Contact Information:
+Email: dmexercise@uofga.edu | Phone: (706) 542-5555 | LinkedIn: @evanworksout
+
+Objective:
+Aspiring to secure an Entry-Level Software Engineer role at Acme to leverage my strong foundation in software development, passion for fintech, and dedication to innovation and excellence.
+
+Education:
+University of Georgia, Athens, GA
+Bachelor of Science in Education, Major: Exercise and Sport Science
+Graduation: May 2023
+GPA: 3.80/4.00
+
+Technical Skills:
+- Proficient in programming languages: Java, Python
+- Solid understanding of data structures, algorithms, and software design principles
+- Knowledgeable in web development: HTML, CSS, JavaScript
+- Experience with Git version control system
+
+Professional Experience:
+Athens Sports Care Center and Rehab, Athens, GA
+Software Developer Intern, August 2021 - May 2022
+- Developed and maintained software solutions for patient management and progress tracking
+- Collaborated with healthcare professionals to design user-friendly interfaces
+- Implemented security measures to ensure the confidentiality of patient data
+- Participated in code reviews and adhered to best practices in software development
+
+Non-Invasive Exercise Muscle Physiology Lab, Athens, GA
+Research Assistant, August 2022 – Present
+- Conducted data analysis on muscle blood flow studies using Python
+- Assisted in the development of software for electrical stimulation training
+
+Leadership Experience:
+UGA Sport Management Club, Athens, GA
+President, January 2022 - Present
+- Managed a team of officers and led club operations
+- Organized events and networking opportunities with industry professionals
+
+Athens-Clarke County Parks and Recreation, Athens, GA
+Basketball Camp Coach/Coordinator, May-July 2021 - 2022
+- Coordinated with staff to plan and execute sports camp activities
+
+Additional Information:
+- Eagerness to learn and adapt to new technologies and frameworks in the fintech industry
+- Excellent problem-solving skills and attention to detail
+- Ability to work effectively in a team environment and communicate clearly
+
+Why Acme:
+- Passionate about leveraging technology to improve financial services
+- Committed to continuous learning and career development in technology and finance
+
+Application Details:
+- Cover letter and portfolio links available upon request

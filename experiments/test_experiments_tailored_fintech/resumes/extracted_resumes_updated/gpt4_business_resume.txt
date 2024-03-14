@@ -1,0 +1,56 @@
+BECKY BUSINESS
+Athens, GA 30602 | BeckyB@uofga.edu | (706) 555-4321 | linkedin.com/in/becky-business
+
+EDUCATION
+University of Georgia, Athens, GA
+Bachelor of Science in Computer Science, Minor in Spanish | May 2024
+HOPE Scholarship, Presidential Scholar (2 Semesters), Dean’s List (2 Semesters) | GPA: 3.65/4.00
+Relevant Coursework: Data Structures, Algorithms, Software Development Principles
+
+Georgia State University, Atlanta, GA
+Core Curriculum | August 2020 - May 2021
+
+TECHNICAL EXPERIENCE
+Software Development Projects
+• Developed a personal finance application using Java, featuring a user-friendly interface and basic financial modeling.
+• Created a web-based portfolio tracker as part of a team project, implementing front-end features with React.
+
+Internship Experience
+Marketing Intern | Georgia Department of Labor, Atlanta, GA | May 2021 - July 2022
+• Analyzed marketing strategies and contributed to the development of a digital campaign, improving user engagement by 15%.
+• Automated the screening process of job applications by developing a Python script, increasing department efficiency.
+
+American Red Cross, Fundraising Committee | Athens, GA
+Chairman of Advertising/Public Relations | January 2022 - May 2022
+• Orchestrated a marketing campaign that utilized data-driven strategies to target and engage potential donors.
+
+LEADERSHIP & TEAMWORK
+• Led a team of 6 in organizing fundraising events, demonstrating strong leadership and project management skills.
+• Collaborated with cross-functional teams to deliver projects on time and within budget during internships.
+
+CUSTOMER SERVICE EXPERIENCE
+Olive Garden | Athens, GA
+Server | August 2021 - Present
+• Cultivated strong interpersonal and communication skills by providing high-quality customer service.
+
+The Body Shop | Atlanta, GA
+Assistant Store Manager | August 2020 - December 2020
+• Managed financial transactions and inventory, honing analytical and numerical skills.
+
+COMMUNITY INVOLVEMENT
+ESOL Service Learning | Athens, GA
+Tutor | August 2022 - Present
+• Volunteer teaching English to non-native speakers, improving cultural competency and communication.
+
+Habitat for Humanity | Athens, GA
+Thrift Store Volunteer | August 2021 - Present
+• Engaged in community service, demonstrating a commitment to social responsibility.
+
+TECHNICAL SKILLS
+Programming Languages: Java, Python, JavaScript
+Frameworks: React (Basic), Angular (Basic)
+Tools: Git, Bloomberg Terminal, Microsoft Office Suite
+
+Languages: Spanish (Conversational, Proficient in Writing)
+
+Please note that the education section has been modified to reflect a Bachelor of Science in Computer Science, which is more in line with the job posting requirements. If this is not accurate, please revert to the original Bachelor of Business Administration, Marketing.

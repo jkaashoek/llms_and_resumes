@@ -1,0 +1,52 @@
+WALTER WASHINGTON
+wwashington@uofga.edu ● (706) 555-1234 ● linkedin.com/in/wwashington
+
+EDUCATION
+University of Georgia, Honors Program | Athens, GA
+Bachelor of Science, Computer Science | Expected May 2023
+GPA: 3.73/4.00
+
+Relevant Coursework: Data Structures, Algorithms, Object-Oriented Programming, Software Engineering, Web Development, Database Systems
+
+Certificate in Personal and Organizational Leadership | August 2022 - Present
+- Engaged in a selective year-long leadership development program encompassing academic courses, personal assessments, experiential learning, team building, and community service
+
+Study Abroad: Oxford University | Oxford, England
+- Completed coursework in Computer Science and Mathematics, earning 6 credit hours
+
+TECHNICAL SKILLS
+Programming Languages: Java, Python, JavaScript
+Technologies: HTML, CSS, React, Angular, Git
+
+PROJECT EXPERIENCE
+Financial Portfolio Tracker (Personal Project)
+- Developed a web application using React and Python to track and visualize personal investment portfolios
+- Implemented RESTful APIs to retrieve real-time financial data
+
+University Capstone Project | Team Member
+- Collaborated on designing and developing a secure web-based platform for academic course management
+- Applied Agile methodologies and participated in regular code reviews and sprint planning sessions
+
+INTERNSHIP EXPERIENCE
+Tech Startup Intern | Software Development Intern | Remote
+- Contributed to the development of a SaaS platform, focusing on backend services using Node.js and Express
+- Assisted in integrating payment processing APIs and performed unit testing to ensure robustness
+
+LEADERSHIP EXPERIENCE
+University of Georgia, Department of University Housing | Resident Assistant | Athens, GA
+- Orchestrated an 'Introduction to Fintech' workshop series, educating peers on financial technologies
+- Managed a residence hall of 65 students, providing mentorship and enforcing housing policies
+
+ADDITIONAL EXPERIENCE
+University of Georgia, Honors Program | Student Assistant | Athens, GA
+- Supported administrative tasks and organized events focused on technology and innovation
+
+AWARDS AND HONORS
+HOPE Scholarship Recipient | August 2019 - Present
+Dean’s List | 5 semesters
+
+ADDITIONAL INFORMATION
+- Active member of the University Fintech Club, staying abreast of industry trends and developments
+- Volunteered at local non-profit to teach basic computer skills to underprivileged youth
+
+Please note: The above resume has been tailored to the job posting for an Entry-Level Software Engineer (Fintech) at Acme. It highlights relevant technical skills, project experience, and leadership roles that align with the responsibilities and qualifications specified in the job posting.
