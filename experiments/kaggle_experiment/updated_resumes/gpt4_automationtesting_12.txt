@@ -1,0 +1,52 @@
+John Doe
+123 Main Street
+Anytown, USA 12345
+(123) 456-7890
+john.doe@email.com
+
+Objective
+To secure an Entry-Level Software Engineer position at Acme where I can leverage my extensive experience in QA automation and software development to contribute to innovative software solutions.
+
+Skills
+- Proficient in programming languages including C++, Python, and VB Script.
+- Experienced with automation frameworks such as Modular, Data Driven, BPT, and Hybrid.
+- Skilled in test automation tools including HP UFT, Selenium, and Rational Robot.
+- Strong knowledge of Agile methodologies including Scrum, Kanban, and XP.
+- Proficient in bug tracking tools such as Jira and HP Quality Control.
+- Knowledge of version control systems including Git, SVN, and ClearCase.
+- Familiar with database management using Oracle, SQL Server, and MySQL.
+- Understanding of network protocols like TCP/IP, HTTP, HTTPS, and FTP.
+- Exposure to healthcare industry standards such as DICOM and HL7.
+
+Education
+Bachelor of Science in Computer Science
+Mumbai University, Mumbai, Maharashtra
+
+Professional Experience
+QA Automation Lead, Leading Industrial Automation
+- Developed and executed system integration and GUI tests using C++.
+- Designed and maintained test automation frameworks and scripts.
+- Coordinated with cross-functional teams to ensure quality and efficiency.
+
+QA Automation Specialist, GE-Healthcare
+- Validated GE CT scanners adhering to FDA regulations.
+- Implemented automation tools to increase productivity and accuracy.
+
+QA Automation Engineer, Patni-GE-Healthcare PACS
+- Created test scenarios and scripts for end-to-end testing of GE PACS applications.
+- Contributed to the development of a hybrid automation framework.
+
+QA Tester, HDFC Bank Limited
+- Reviewed and tested business requirements ensuring compliance and performance.
+- Automated test flows and performed backend database testing.
+
+Software QA Analyst, Vistaar Systems Limited
+- Analyzed requirements to create and execute manual and automated test cases.
+- Conducted performance and database testing using various automation tools.
+
+Certifications
+- Certified Selenium Professional
+- Agile Certified Practitioner (PMI-ACP)
+
+References
+Available upon request.

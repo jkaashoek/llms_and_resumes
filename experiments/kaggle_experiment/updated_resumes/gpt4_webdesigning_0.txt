@@ -1,0 +1,69 @@
+John Doe
+123 Main Street
+Pune, Maharashtra, 12345
+Email: john.doe@email.com
+Phone: (123) 456-7890
+
+PROFESSIONAL SUMMARY
+Detail-oriented Software Developer with a Bachelor's degree in Computer Applications from Pune University. Proficient in web development technologies including HTML5, CSS3, Bootstrap, PHP, Ajax, jQuery, and JavaScript. Experienced in working with MySQL databases and familiar with development tools such as Notepad++ and Sublime Text2. Adept at working in team environments and committed to continuous learning and professional growth.
+
+EDUCATION
+Bachelor of Computer Applications (B.C.A.)
+Pune University, Pune, Maharashtra
+Graduated: Month Year
+
+Higher Secondary Certificate (H.S.C.)
+Pune University, Pune, Maharashtra
+Graduated: Month Year
+
+Secondary School Certificate (S.S.C.)
+Pune University, Pune, Maharashtra
+Graduated: Month Year
+
+TECHNICAL SKILLS
+Languages: HTML5, CSS3, JavaScript, PHP, jQuery, Ajax
+Frameworks: Bootstrap, CodeIgniter
+Databases: MySQL
+Tools: Notepad++, Sublime Text2, XAMPP Control Panel, Apache Tomcat
+Operating Systems: Windows
+
+PROFESSIONAL EXPERIENCE
+Software Developer
+Exposys Pvt. Ltd., Pune, Maharashtra
+August 2017 - Present
+- Developed and maintained dynamic websites and applications ensuring strong optimization and functionality.
+- Worked on multiple projects, taking on responsibilities from concept to deployment.
+- Collaborated with team members to troubleshoot and resolve issues.
+- Engaged in continuous learning to stay updated with the latest web development technologies.
+
+SELECT PROJECTS
+Project I: Pragat Bharat System
+- Developed a system designed to collect information across different sectors, improving data accessibility.
+
+Project II: Go Ayur System
+- Contributed to the development of a comprehensive Ayurvedic health services platform, enhancing user experience.
+
+Project III: Vitsanindia System
+- Created an online shopping application with multilingual support and diverse product categories.
+
+Project IV: MahabaleshwarTours
+- Implemented an online booking and payment system for tour packages, streamlining the customer experience.
+
+Project V: Cityspaceindia
+- Developed a service provider website, offering a variety of categories to users.
+
+Project VI: Fruitsbuddy
+- Built a management system for fruit vendors, enabling efficient handling of orders and inventory.
+
+Project VII: Totalcitee
+- Created a real estate web application to facilitate property sales through a user-friendly interface.
+
+Project VIII: Golchha
+- Developed a service provider platform, catering to diverse user needs.
+
+ADDITIONAL INFORMATION
+- Eagerness to learn and embrace new technologies and frameworks.
+- Excellent problem-solving skills and attention to detail.
+- Ability to work effectively in a team environment and communicate clearly.
+
+References available upon request.

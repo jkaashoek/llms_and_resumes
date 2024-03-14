@@ -96,19 +96,19 @@ class ResumeExperiment:
 # expr_dir = 'experiments/test_experiments'
 
 # The update instructions
-update_instructions = 'You are an experiment resume writer who has been hired to improve resumes.'
-update_agents = [Agent(traits={'role': 'improver', 
-                                'persona': update_instructions})]
-update_prompt = 'Improve the following resume.'
-update_models = [Model(m) for m in models[4:5]] # Just the GPT models
+# update_instructions = 'You are an experiment resume writer who has been hired to improve resumes.'
+# update_agents = [Agent(traits={'role': 'improver', 
+#                                 'persona': update_instructions})]
+# update_prompt = 'Improve the following resume.'
+# update_models = [Model(m) for m in models[4:5]] # Just the GPT models
 
-# The eval instructions
-eval_instructions = 'You are hiring manager at a tech company who wants to a hire a intro level software engineer. You have been given a set of resumes to evaluate.'
-eval_agents = [Agent(traits={'role': 'evaluator',
-                             'person': eval_instructions})]
-eval_prompt = 'Evaluate the following resume on a scale from 1 to 10, where 1 corresponds to the worst possible candidate and 10 corresponds to the best possible candidate'
-eval_options = list(range(0, 11))
-eval_models = [Model(m) for m in models[3:4]]
+# # The eval instructions
+# eval_instructions = 'You are hiring manager at a tech company who wants to a hire a intro level software engineer. You have been given a set of resumes to evaluate.'
+# eval_agents = [Agent(traits={'role': 'evaluator',
+#                              'person': eval_instructions})]
+# eval_prompt = 'Evaluate the following resume on a scale from 1 to 10, where 1 corresponds to the worst possible candidate and 10 corresponds to the best possible candidate'
+# eval_options = list(range(0, 11))
+# eval_models = [Model(m) for m in models[3:4]]
 
 # features = {
 #     'update_agents': update_agents,
@@ -121,6 +121,6 @@ eval_models = [Model(m) for m in models[3:4]]
 # }
 
 # Create the experiment
-print(update_models)
-exp = ResumeExperiment(features, expr_dir)
-exp.update_resumes(['resumes/extracted_resumes'])
+# print(update_models)
+# exp = ResumeExperiment(features, expr_dir)
+# exp.update_resumes(['resumes/extracted_resumes'])

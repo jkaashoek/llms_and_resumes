@@ -1,0 +1,45 @@
+TECHNICAL EXPERTISE
+
+- Database Languages: Proficient in SQL for complex database management.
+- Database Tools: Experienced with SQL Server (2014, 2017), PostgreSQL (9.5, 9.6), and Oracle 11gR2.
+- Operating Systems: Skilled in managing Redhat Linux, Oracle Linux, and Windows Server (2012, 2016).
+
+OTHER TECHNICAL SKILLS
+
+- In-depth knowledge of Oracle 11gR2 database software installation, database creation, and system architecture.
+- Competent in file management, space management, user management, and troubleshooting.
+- Proficient in the configuration of Oracle network files (Listener.ora, Tnsnames.ora) and performance tuning using AWR, ADDM, and ASH reports.
+- Skilled in database backup and recovery procedures, including RMAN hot & cold backups.
+- Familiar with Oracle Flashback Technologies and data pump utilities (Expdp/Impdp).
+- Experience in implementing and managing Oracle 11gR2 RAC and Data Guard.
+- Accomplished in database upgrades and patching with Oracle's Opatch utility.
+
+PROFESSIONAL STRENGTHS
+
+- Strong communication skills, able to articulate complex technical concepts clearly.
+- Adaptable to various work environments, with a proven track record as a lead and collaborative team member.
+- Demonstrates patience and effective problem-solving under pressure.
+- Eager to learn and quickly assimilate new technologies and methodologies.
+
+EDUCATION
+
+- Bachelor of Engineering (B.E.) in Computer Engineering, Mumbai University, Mumbai, Maharashtra.
+- Higher Secondary Certificate, Dr. DY Patil Jr College.
+
+PROFESSIONAL EXPERIENCE
+
+Database Administrator - DBA, Marketplace Technologies Ltd
+
+- Managed and supported database systems for high-availability clusters using PostgreSQL on Redhat Linux with Pacemaker.
+- Collaborated with development and Linux teams to optimize database performance and support.
+- Successfully implemented new releases into production environments and managed PostgreSQL server tasks.
+- Coordinated with storage teams to establish robust Disaster Recovery (DR) systems using EMC technology.
+- Configured cross-platform authentication and logical replication for database servers.
+- Administered daily operations of live SQL Servers, including recovery activities and production rollouts.
+- Configured and maintained SQL Server installations, security measures, and high-availability setups.
+
+Duration: Feb 2017 - Present
+
+Description: As part of the IT team at Bombay Stock Exchange (BSE), contributed to the maintenance and enhancement of Asia's first and fastest stock exchange, ensuring the seamless operation of trading platforms for equity, currencies, and other financial instruments.
+
+Note: This resume has been tailored to match the qualifications and responsibilities of an Entry-Level Software Engineer position at Acme. It emphasizes relevant technical skills, educational background, and professional experience while aligning with the job requirements for software development and teamwork.

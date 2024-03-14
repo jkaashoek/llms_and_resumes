@@ -1,0 +1,56 @@
+John Doe
+123 Your Street
+Your City, ST 12345
+(123) 456-7890
+john.doe@email.com
+
+OBJECTIVE
+Passionate and detail-oriented Entry-Level Software Engineer seeking to join Acme's dynamic team to contribute to innovative software solutions. Eager to leverage strong foundational knowledge in software development and a commitment to excellence in a collaborative, continuous learning environment.
+
+EDUCATION
+Bachelor of Engineering (B.E.), Computer Engineering
+Sanghavi College of Engineering, Pune, Maharashtra
+January 2017
+
+Diploma in Computer Technology
+Shree Mahavir Polytechnic, Nashik, Maharashtra
+January 2014
+
+Secondary School Certificate (S.S.C.)
+C.D.O. Meri High School, Nashik, Maharashtra
+January 2010
+
+TECHNICAL SKILLS
+Programming Languages: Java, C, C++, Python, Apex, Visualforce
+Databases: MySQL
+Frameworks: Django
+Technologies: Salesforce.com Administration and Development, Force.com, Salesforce CRM, Blockchain
+Web Development: HTML5, CSS3
+Version Control: Git (Basic knowledge)
+
+PROJECT EXPERIENCE
+Diploma Project: VANET (Virtual Ad-Hoc Network)
+- Developed a real-time video streaming system using Java.
+- Facilitated efficient video streaming across multiple devices within a vehicular network.
+
+Degree Project: Drowsiness Detection System
+- Engineered a safety solution using Python and Raspberry Pi to detect driver drowsiness.
+- Implemented a system that triggers an alarm when signs of drowsiness are detected, enhancing driver safety.
+
+PROFESSIONAL EXPERIENCE
+Blockchain Developer
+[Company Name], [Location] — 6 Months
+- Managed a mining firm, overseeing the operational aspects of blockchain technology.
+- Created smart contracts on both Waves and Ethereum platforms, demonstrating proficiency in blockchain development.
+
+ADDITIONAL INFORMATION
+- Demonstrated ability to work effectively in team environments and communicate complex ideas clearly.
+- Proven problem-solving skills and meticulous attention to detail.
+- Committed to continuous learning and staying current with the latest technological advancements.
+
+WHY ACME?
+- Excited by the opportunity to work with cutting-edge technologies and contribute to transformative projects.
+- Aligned with Acme's values of diversity, creativity, and continuous learning.
+- Looking forward to being a part of a vibrant and inclusive company culture.
+
+References available upon request.

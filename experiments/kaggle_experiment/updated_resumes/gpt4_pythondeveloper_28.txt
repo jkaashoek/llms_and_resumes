@@ -1,0 +1,29 @@
+Education:
+
+Bachelor of Engineering (B.E.), Computer Science - Expected June 2020
+Anantrao Pawar College of Engineering & Research Centre, Pune, Maharashtra
+
+Diploma in Computer Science - June 2016
+AISSMS Polytechnic, Pune, Maharashtra
+
+Professional Experience:
+
+Python Developer - Cybage Software Pvt. Ltd.
+
+Responsibilities:
+- Collaborated with a team of developers to design and implement new software features.
+- Utilized Python to develop high-quality, scalable, and maintainable code.
+- Participated in code reviews to maintain code quality and shared best practices.
+- Assisted in identifying and troubleshooting software issues and defects.
+
+Skills:
+
+- Proficient in Python and understanding of software development principles.
+- Knowledgeable in data structures, algorithms, and software design.
+- Familiar with Agile and Scrum methodologies.
+- Strong problem-solving abilities and attention to detail.
+- Effective team collaboration and communication skills.
+
+Objective:
+
+Seeking an Entry-Level Software Engineer position at Acme to leverage my programming expertise and contribute to innovative software solutions while further developing my skills in a dynamic and collaborative environment.

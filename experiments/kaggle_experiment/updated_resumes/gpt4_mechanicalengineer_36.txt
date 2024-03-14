@@ -1,0 +1,46 @@
+John Doe
+123 Main Street
+City, State, Zip
+Phone: (123) 456-7890
+Email: john.doe@email.com
+
+Professional Summary:
+Highly motivated and hardworking individual with a passion for technology and a strong foundation in mechanical engineering principles. Adaptable to diverse work environments and committed to continuous learning and professional growth. Seeking an entry-level software engineering role to leverage my engineering background and software development skills.
+
+Education:
+Bachelor of Engineering (B.E.), Mechanical Engineering
+Alamuri Ratnamala Institute of Engineering & Technology, January 2016
+
+Higher Secondary Certificate (H.S.C.), Science
+Mumbai University, January 2010
+
+Secondary School Certificate (S.S.C.)
+Prakash Jr. College of Science & Commerce, S.M.T. Rajdevi Hindi High School, Maharashtra State Board, January 2008
+
+Professional Experience:
+Mechanical Design Engineer
+SANARCO Engineering Pvt Ltd, Month Year - Month Year
+- Developed detailed designs for mechanical equipment using AutoCAD, SolidWorks, and CATIA.
+- Collaborated with cross-functional teams to refine design parameters and ensure product quality.
+
+Design Engineer
+SURYA Fitness, Month Year - Present
+- Utilized CAD software to create innovative design solutions for fitness equipment.
+- Streamlined the design process, reducing project turnaround time by 15%.
+
+Projects:
+Automatic Wall Plastering Machine
+- Led a project to develop an automated plastering machine, improving construction efficiency.
+- Conducted thorough testing to ensure machine performance met industry standards.
+
+Skills:
+- Proficient in AutoCAD, SolidWorks, and CATIA with 12 months of professional experience.
+- Strong understanding of mechanical design principles and engineering practices.
+- Quick learner with the ability to grasp new software development tools and languages.
+
+Additional Information:
+- Eagerness to transition into the software engineering field and apply mechanical engineering knowledge.
+- Excellent problem-solving abilities and a detail-oriented mindset.
+- Proven ability to work effectively in team environments and communicate technical concepts clearly.
+
+References available upon request.

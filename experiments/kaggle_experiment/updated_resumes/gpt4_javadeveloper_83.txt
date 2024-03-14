@@ -1,0 +1,49 @@
+John Doe
+
+Contact Information
+Email: john.doe@email.com
+Phone: (123) 456-7890
+LinkedIn: linkedin.com/in/johndoe
+GitHub: github.com/johndoe
+
+Objective
+Recent BE Computer Engineering graduate with a solid foundation in software development and specialization in Java technologies. Seeking an Entry-Level Software Engineer position at Acme to leverage my technical skills and contribute to innovative software solutions. Eager to learn and grow within a dynamic team environment.
+
+Education
+Bachelor of Engineering (BE), Computer Engineering
+Late G.N. Sapkal College of Engineering, Nashik, Maharashtra
+August 2013 - July 2016
+
+Diploma in Computer Technology
+K K Wagh Polytechnic, Nashik, Maharashtra
+July 2009 - June 2013
+
+Technical Skills
+- Programming Languages: Java, J2EE, JavaScript, PHP
+- Frameworks: Spring MVC, Struts, Hibernate, Ionic 3, AngularJS
+- Web Technologies: HTML, CSS, AJAX, JSON, RESTful APIs
+- Databases: Microsoft SQL Server, MySQL, Oracle
+- Version Control: Git (familiarity)
+- Web Servers: Apache Tomcat
+- Operating Systems: Windows Server 2012 R2, Windows XP/7/8.1/10, Linux, Mac OS
+- Cloud Services: Azure Web Services
+
+Professional Experience
+Java Developer
+Replete Business Solutions Pvt. Ltd.
+- Developed and maintained web applications using Spring MVC, MySQL, and Microsoft SQL Server
+- Collaborated on a team to implement dynamic features using Java, J2EE, AJAX, and JavaScript
+- Gained experience with mobile development frameworks, specifically Ionic 3 and AngularJS
+
+Projects and Internships
+- Participated in a collaborative project to develop a web application, enhancing my skills in Java and Spring MVC
+- Completed an internship focused on web development, gaining exposure to HTML, CSS, and JavaScript
+
+Additional Information
+- Demonstrated ability to work effectively in a team and communicate clearly with cross-functional teams
+- Proven problem-solving skills and attention to detail through project and internship experiences
+
+Why Acme is the right fit for me:
+- Passionate about software development and eager to contribute to a team that values innovation and creativity
+- Committed to continuous learning and staying updated with the latest technologies and software engineering best practices
+- Looking for an opportunity to grow and take on new challenges in a supportive and flexible work environment

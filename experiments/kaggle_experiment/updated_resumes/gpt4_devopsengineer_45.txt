@@ -1,0 +1,68 @@
+John Doe
+Software Engineer
+
+Contact Information
+Address: 123 Main St, Anytown, USA
+Phone: (555) 123-4567
+Email: john.doe@example.com
+LinkedIn: linkedin.com/in/johndoe
+GitHub: github.com/johndoe
+
+Professional Summary
+Highly motivated and detail-oriented Software Engineer with a Master's degree in Information Technology and 27 months of experience in DevOps practices. Proficient in a range of programming languages and tools, with a strong foundation in software development life cycle, continuous integration, and deployment. Seeking to leverage my technical skills and passion for technology to contribute to innovative software solutions at Acme.
+
+Core Competencies
+- Proficient in programming languages: C, Java
+- Version control systems: Git, Bitbucket
+- Build tools: Ant, Maven
+- CI/CD: Jenkins
+- Configuration management: Ansible
+- Scripting: Shell Scripting
+- Application servers: Apache Tomcat
+- Software development methodologies: Agile, Scrum
+
+Technical Skills
+- DevOps methodologies
+- Software Development Life Cycle (SDLC)
+- Software Testing Life Cycle (STLC)
+- Continuous Integration and Continuous Deployment (CI/CD)
+- Requirement gathering, documentation, and reporting
+
+Education
+Master of Science in Information Technology
+June 2015 - June 2017
+Jawaharlal Nehru Technological University, Hyderabad, Telangana
+
+Professional Experience
+DevOps Engineer
+Nendrasys Technologies Pvt Ltd
+Duration: 27 months
+
+Project 1: Sloan Global Holdings (E-commerce Platform)
+- Developed e-commerce product features for B2B sales, focusing on online sales, distribution, and marketing of electronic products.
+- Automated CI/CD processes using Jenkins, improving deployment efficiency.
+- Scripted build and deployment tasks using Ant, Maven, and Shell for multiple applications.
+- Managed version control with Git and Bitbucket, ensuring smooth code integration and collaboration.
+- Maintained Apache Tomcat servers, optimizing reusability and performance.
+
+Project 2: Bangkok Bank Limited (BBL) Thaitrade (Commercial, E-commerce & Payment Portal)
+- Supported the development of an e-commerce payment portal, accommodating multiple merchants and payment options.
+- Implemented Master-Slave Jenkins architecture, enhancing build performance.
+- Coordinated with cross-functional teams for seamless code deployment from development to production.
+- Authored comprehensive documentation for build/release processes and application configurations.
+
+Projects & Achievements
+- Participated in the design and development of two major e-commerce platforms, contributing to significant improvements in the CI/CD pipeline.
+- Successfully managed multiple simultaneous software releases, demonstrating strong change and configuration management skills.
+
+Certifications
+- Certified Jenkins Engineer
+- Ansible for Network Automation
+
+Additional Information
+- Eagerness to learn and adapt to new technologies and frameworks
+- Excellent problem-solving skills and attention to detail
+- Strong team player with effective communication skills
+
+Why Acme?
+I am excited about the opportunity to join Acme because of its dedication to innovation and the chance to work on cutting-edge technologies. I am eager to contribute to transformative projects and grow professionally within a dynamic and supportive environment.

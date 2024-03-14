@@ -1,0 +1,50 @@
+John Doe
+123 Your Street, City, State, Zip Code
+Phone: (123) 456-7890 | Email: john.doe@email.com
+LinkedIn: linkedin.com/in/johndoe
+
+Objective
+A detail-oriented and innovative civil engineering graduate with a strong foundation in quality assurance and control. Seeking an Entry-Level Software Engineer position at Acme to leverage my analytical skills and passion for technology to contribute to transformative software solutions.
+
+Education
+Bachelor of Engineering in Civil Engineering
+Anna University, Chennai, Tamil Nadu
+
+Professional Experience
+QA/QC Civil Engineer
+Ray Engineering Limited, Mumbai, India
+March 2016 – Present
+- Developed and implemented QA/QC programs in line with company quality policies.
+- Managed and maintained QA/QC documentation for multiple high-stakes projects.
+- Conducted thorough site inspections and coordinated with cross-functional teams.
+- Ensured construction compliance with final issued drawings and project specifications.
+
+QA/QC Civil Engineer
+Gulf Asia Contracting Co LLC, Dubai, UAE
+- Organized and managed document control for technical submittals and QA/QC validation.
+- Led joint inspections with consultants and clients, ensuring adherence to quality standards.
+
+QA/QC Civil Engineer
+High View Builders, Kerala, India
+- Supported project engineers with daily site reports and coordination of subcontractors.
+- Maintained safety standards and ensured the availability of materials and PPE for project execution.
+
+Skills
+- Proficient in Java, C++, and Python (Programming languages relevant to the job posting)
+- Solid understanding of data structures, algorithms, and software design principles
+- Familiar with Agile and Scrum methodologies
+- Strong problem-solving abilities and attention to detail
+- Effective communication and team collaboration skills
+
+Certifications
+- Certified Quality Engineer (CQE)
+
+Projects
+- Automated Inspection Request System: Developed a system to streamline the QA/QC process, reducing inspection request time by 30%.
+
+Additional Information
+- Eager to learn new technologies and frameworks.
+- Exposure to web development technologies through personal projects.
+
+References
+Available upon request.

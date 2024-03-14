@@ -1,0 +1,42 @@
+Education:
+Bachelor’s degree in Computer Science, Engineering, or a related field
+
+Professional Experience:
+
+Hadoop Developer - INFOSYS
+
+Project: Global Banking Data Consolidation
+- Spearheaded the analysis of banking rates data sets and authored a comprehensive specification document.
+- Estimated project efforts and timelines with a high degree of accuracy.
+- Developed robust SPARK Scala and SPARK SQL programs utilizing Eclipse IDE on both Windows and Linux platforms.
+- Engineered and executed KPI's test scenarios, cases, and documented test results.
+- Conducted thorough testing of Scala programs in Linux Spark Standalone mode.
+- Successfully set up multi-cluster on AWS and deployed Spark Scala programs.
+- Delivered solutions incorporating Hadoop ecosystem components: HDFS, MapReduce, Pig, Hive, HBase, and Zookeeper.
+- Developed large scale server-side systems with distributed processing algorithms.
+- Generated BI team reports through Sqoop, exporting data into HDFS and Hive.
+- Supported, troubleshot, and optimized MapReduce jobs and Pig Latin scripts.
+- Demonstrated deep understanding of Hadoop design principles, cluster connectivity, security, and performance factors.
+- Imported/exported data between various databases such as Oracle, Teradata, and HDFS/Hive using tools like Sqoop, TPT, and Connect Direct.
+- Authored scripts for client-side execution to temporarily store data in HDFS before loading into Hive tables.
+- Crafted Sqoop scripts facilitating Pig and MySQL Database interactions.
+- Played a key role in developing Hive Reports and managing Hive table partitions.
+- Maintained comprehensive technical documentation for Hadoop Clusters, Hive queries, and PIG scripts execution.
+- Managed Hadoop jobs processing millions of records of text data.
+
+Environment: Java, Hadoop, HDFS, MapReduce, Pig, Hive, Sqoop, Flume, Oozie, HBase, Spark, Scala, Linux, NoSQL, Storm, Tomcat, Putty, SVN, GitHub, IBM WebSphere v8.5.
+
+Project: Telecommunications Customer Data Analysis
+- Installed and configured Apache Hadoop tools such as Hive, Pig, HBase, and Sqoop for application development and testing.
+- Authored MapReduce jobs to analyze user data trends.
+- Established database connections using SQOOP.
+- Created Hive tables, managed data loads, and wrote queries using HiveQL.
+- Optimized Hive queries through effective partitioning and joining of tables.
+- Executed SQL DB Migration to HDFS.
+- Utilized NoSQL (HBase) for OLTP with faster performance, maintaining data in a De-Normalized format.
+- Collected and transformed data from distributed sources into Avro models for HBase processing.
+- Orchestrated job flows using Oozie.
+- Implemented Fair schedulers on Job tracker for equitable resource distribution across MapReduce jobs.
+- Exported analyzed data to relational databases for BI team visualization and report generation.
+
+Environment: Hadoop, Hive, Linux, MapReduce, HDFS, Hive, Python, Pig, Sqoop, Cloudera, Shell Scripting, Java (JDK 1.6), Java 6, Oracle 10g, PL/SQL, SQL*PLUS

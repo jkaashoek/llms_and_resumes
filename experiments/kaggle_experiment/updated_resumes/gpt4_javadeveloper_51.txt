@@ -1,0 +1,38 @@
+Education:
+B.E. in Information Technology, January 2016
+Savitribai Phule Pune University, Pune, Maharashtra
+
+Professional Experience:
+Java Developer, Vertical Software
+
+Responsibilities:
+- Designed and developed web applications using J2EE, Servlets, JSP, and MVC architecture.
+- Implemented user interfaces with JavaScript, HTML, CSS, jQuery, AJAX, and JSON.
+- Managed full software development life cycle, from requirement gathering and analysis to design, development, and unit testing.
+
+Technical Skills:
+- Programming Languages: Java, J2EE
+- Frameworks: Spring, Hibernate
+- Scripting and Server-Side: JSP, Servlets, JDBC, JavaScript, jQuery, Ajax, JSON
+- Application Server: Tomcat
+- Databases: MongoDB, MySQL
+- IDEs: Eclipse
+
+Projects:
+1. Expense Ledger
+   - Role: Java Developer
+   - Technologies: Java, JSP, Servlet, MySQL, JavaScript, JSON, jQuery, Ajax
+
+2. Trimurti Developer (Real Estate)
+   - Role: Java Developer
+   - Technologies: Java, JSP, Servlet, MySQL, JavaScript, JSON, jQuery, Ajax
+
+3. Vimay Enterprise
+   - Role: Java Developer
+   - Technologies: Java, JSP, Spring, Hibernate, Maven, jQuery, Ajax
+
+Additional Information:
+- Completed Higher Secondary Education with a 58.8% score
+- Proven ability to work effectively in a team environment and communicate clearly
+- Demonstrated problem-solving skills and attention to detail
+- Eagerness to learn and embrace new technologies and frameworks

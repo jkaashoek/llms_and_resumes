@@ -1,0 +1,50 @@
+John Doe
+123 Your Street, City, State, 12345 | (123) 456-7890 | email@example.com
+
+Objective:
+Recent Mechanical Engineering graduate with a strong foundation in software development, seeking to leverage my skills in an Entry-Level Software Engineer role at Acme. Passionate about technology and eager to contribute to innovative software solutions.
+
+Education:
+Bachelor of Engineering (B.E.), Mechanical Engineering
+Savitribai Phule Pune University, Pune, Maharashtra
+June 2014 - June 2018
+
+Professional Experience:
+Mechanical Design Engineer, Push Engineering Pvt Ltd, Pune, Maharashtra
+July 2018 - Present
+- Designed pressure vessels, condensers, and conveyors for ice making plants using 3D modeling software.
+- Prepared Bill of Materials (BOM) and collaborated with the production team to streamline manufacturing processes.
+- Implemented ERP systems to improve project management and operational efficiency.
+
+Research Assistant, Central Water and Power Research Station, Pune, Maharashtra
+June 2017 - June 2018
+- Assisted in R&D projects focused on generating sea waves in a laboratory setting for the design of port and harbor structures.
+- Operated wave makers powered by hydraulic and pneumatic systems, contributing to the development of regular wave generation techniques.
+- Supported the design of hydraulic systems including servo actuators, axial piston pumps, and electric motors under the guidance of a Scientist 'B'.
+
+Technical Skills:
+- Programming Languages: Proficient in Java (self-taught during personal projects)
+- Software Development Tools: Familiar with Git version control
+- CAD Software: AutoCAD, CATIA V5, SolidWorks
+- Engineering Software: ProE
+- Office Suite: Microsoft Office (Word, Excel, PowerPoint)
+
+Projects:
+- Developed a simple Java application to automate BOM generation for mechanical parts.
+- Created a portfolio of 3D models demonstrating proficiency in CAD software.
+
+Extracurricular Activities:
+- Organized a National level Technical event for the Mechanical Student Association (MESA).
+- Served as Treasurer and Coordinator for MESA.
+- Participated in a 3D printing workshop and acquired hands-on experience.
+
+Professional Development:
+- Completed Work Readiness Training by NASSCOM Foundation and Global Talent Track.
+- Attended Life Skills Training by NASSCOM Foundation and Global Talent Track.
+
+Personal Attributes:
+- Positive Attitude
+- Quick Learner
+- Strong Team Player
+
+I am enthusiastic about transitioning to the software engineering field and committed to continuous learning to keep up with the latest technologies and best practices.

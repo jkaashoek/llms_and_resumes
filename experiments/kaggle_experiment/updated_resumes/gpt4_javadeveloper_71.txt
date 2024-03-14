@@ -1,0 +1,71 @@
+John Doe
+Software Engineer
+
+Contact Information
+Address: [Your Address]
+Phone: [Your Phone Number]
+Email: [Your Email Address]
+LinkedIn: [Your LinkedIn Profile]
+GitHub: [Your GitHub Profile]
+
+Professional Summary
+Recent M.C.A. graduate with a comprehensive understanding of various programming languages and web technologies. Proven ability to leverage full-stack development skills to build and maintain responsive and efficient applications. Eager to contribute to a dynamic team at Acme and further develop my skills in a collaborative environment.
+
+Technical Skills
+- Programming Languages: Java (Servlet, JSP, Spring Boot), JavaScript (including JQuery, Ajax, AngularJs)
+- Web Technologies: HTML5, CSS3, Bootstrap
+- Database Management: MySQL
+- Development Tools: Eclipse, Spring Tool Suite, NetBeans, Sublime Text, Atom
+- Version Control: Git (Basic)
+- Operating Systems: Windows XP, 7, 8, 10
+
+Education
+Master of Computer Applications (M.C.A.), January 2018
+Pune University, Pune, Maharashtra
+
+Bachelor of Computer Applications (B.C.A.), January 2015
+Amravati University, Amravati, Maharashtra
+
+Higher Secondary Certificate (H.S.C.), January 2012
+Amravati University, Amravati, Maharashtra
+
+Secondary School Certificate (S.S.C.), January 2010
+Amravati University, Amravati, Maharashtra
+
+Professional Experience
+Full Stack Java Developer, Salcluster Technologies
+- Developed full-stack web applications using Java Servlets, JSP, Ajax, and web technologies, successfully delivering 3 projects to clients.
+
+Java Developer, OmegaSoft Technologies Pvt. Ltd.
+- Engaged in software development using Java Spring Hibernate and AngularJs, focusing on MVC architecture and service-based programming.
+
+Internship Project: Employment Times
+- Designed and implemented a lightweight website for newspaper postings across India, integrating features such as e-paper posting, subscriptions, and online payments.
+
+Projects
+GST and Sales Billing Software
+- Developed a web application for client billing, including GST billing, invoice generation, and printing.
+
+Dinman News Website
+- Created an online platform for displaying video and text news content.
+
+Agri Management Website
+- Built a website for the purchase and sale of vegetables across India, with a focus on user-friendly interfaces and backend management.
+
+Certifications
+- Java Developer Certificate, Unanth Technical Institute
+- Java Certificate, SoloLearn
+- Command Line Crash Course, Udemy
+
+Professional Development
+- Actively pursuing knowledge in web development technologies like React and Angular.
+- Participated in code reviews and adhered to best practices in software development.
+- Collaborated with cross-functional teams to define, design, and ship new features.
+
+Additional Information
+- Excellent problem-solving skills and attention to detail.
+- Strong communication skills and ability to work effectively in a team environment.
+- Eagerness to learn and embrace new technologies and frameworks.
+
+References
+Available upon request.

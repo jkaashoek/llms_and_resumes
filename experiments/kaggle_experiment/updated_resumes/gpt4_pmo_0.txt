@@ -1,0 +1,40 @@
+John Doe
+123 Your Street, Pune, India | (123) 456-7890 | email@example.com
+
+Objective
+Detail-oriented and analytical entry-level software engineer with a Bachelor's degree in Computer Science. Passionate about leveraging a strong foundation in software development and a proven track record in project management to contribute to innovative software solutions.
+
+Education
+Bachelor of Science in Computer Science
+University of Pune, Pune, India
+
+Skills
+Programming Languages: Proficient in Java, C++, Python, JavaScript, and Ruby
+Software Development: Solid understanding of data structures, algorithms, and software design principles
+Project Management: Experienced with Agile and Scrum methodologies, project scheduling, and risk management
+Technical Tools: Proficient in Git, CA Clarity, Visio, SAP, MRS, CPRO, Confluence, advanced MS Excel, MS Project, SharePoint
+Communication: Excellent written and verbal communication skills in English, Hindi, Marathi, Kannada, and Konkani
+
+Professional Experience
+Senior Executive PMO Consultant, Ensono LLP
+- Developed structured reports and presentations for senior delivery management
+- Managed project implementation, invoicing, billing, and SLA compliance
+- Maintained project documentation and data in Clarity and SharePoint
+
+Senior Executive PMO, Wipro Technology
+- Created and maintained reports on operational performance, capacity, and utilization
+- Coordinated with stakeholders to optimize resource utilization and project delivery
+
+Workforce Management, Wipro InfoTech
+- Analyzed staffing patterns and implemented resource allocation based on project forecasts
+- Managed hiring and training of new employees, ensuring alignment with business needs
+
+Certifications
+ITIL Foundation Certified
+Certified Associate in Project Management (CAPM)
+
+Additional Information
+Marital Status: Married
+Location: Willing to work remotely
+
+References available upon request.

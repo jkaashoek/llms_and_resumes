@@ -1,0 +1,58 @@
+John Doe
+123 Main Street
+Anytown, USA 12345
+(123) 456-7890
+john.doe@email.com
+
+PROFESSIONAL SUMMARY
+Highly skilled and experienced Network and Security Engineer with a strong background in implementing, troubleshooting, and monitoring network security solutions. Proficient in multi-vendor firewall technologies, network infrastructure configuration, and security best practices. Adept at working in multi-client data center environments and committed to continuous learning and improvement.
+
+TECHNICAL SKILLS
+- Network Security Solutions Implementation & Troubleshooting
+- Multi-Vendor Firewall Management (Cisco ASA, Checkpoint, Juniper/Netscreen, Fortinet, FWSM)
+- Network Security Monitoring Tools (Zenoss, Solarwinds, Cisco Prime)
+- F5 Load Balancers Configuration & Maintenance
+- Cisco Routing and Switching (1800, 1900, 2500, 2600, 2800, 3600, Nexus 5k/7k Series)
+- Cisco Switches Configuration (2960, 3750, Catalyst, 4500, 3600 Series)
+- Bluecoat Proxy Administration
+- ITIL Process Knowledge
+- Firewall IOS Upgrade Projects
+- SSL Certificate Updates & I-Rule Management
+
+EDUCATION
+Bachelor of Engineering (BE), Electronics
+A.I.S.S.M.S College of Engineering, University of Pune
+Pune, Maharashtra, September 2006 - August 2011
+
+Higher Secondary Certificate, Science
+Sinhgad College, University Of Pune
+Pune, Maharashtra, July 2004 - February 2006
+
+Secondary School Certificate (SSC), Science
+M.E.S Boys High School
+Pune, Maharashtra, June 2003 - March 2004
+
+WORK EXPERIENCE
+Network and Security Engineer
+Capita
+- Managed and improved client shared network and security infrastructure
+- Conducted planning, implementation, and troubleshooting of customer requests
+- Monitored datacenter infrastructure on a 24/7 basis
+- Provided on-call weekend support
+
+Network and Security Engineer
+Capgemini India Pvt. Ltd
+- Supported client dedicated infrastructure as part of the UK India NOC
+- Streamlined client onboarding processes through handover sessions
+- Mentored junior engineers and represented critical changes in weekly CAAB calls
+
+Network and Security Engineer
+SunGard Availability Services
+- Planned and implemented network requests and projects for clients
+- Conducted disaster recovery test planning and implementation
+- Managed DNS record management and datacenter remediation projects
+
+PROFESSIONAL DEVELOPMENT
+- Ongoing training in network security technologies and best practices
+- Regular participation in technical workshops and industry conferences
+

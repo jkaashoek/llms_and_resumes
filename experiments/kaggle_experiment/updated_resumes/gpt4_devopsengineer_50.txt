@@ -1,0 +1,54 @@
+John Doe
+
+Software Engineer
+
+Summary:
+Innovative and solutions-driven software engineer with a strong background in cloud operations, DevOps, and software development. Proven experience in leading teams, automating processes, and managing cloud-based applications. Adept at problem-solving, scripting, and database management. Seeking to leverage my technical expertise and leadership skills as an Entry-Level Software Engineer at Acme.
+
+Skills:
+- Proficient in Cloud Computing, Shell Scripting, Python, and Automation
+- Experienced in solution architecture and cloud services (Azure, AWS)
+- Strong foundation in Linux/Unix administration and monitoring
+- Knowledgeable in web technologies (HTML, CSS)
+- Familiar with version control systems, especially Git
+- Excellent problem-solving abilities and attention to detail
+- Effective team leadership and project management
+
+Professional Experience:
+
+Cloud Operations Architect (DevOps) - DevOps
+- Managed Tibco Spotfire enterprise & cloud product support
+- Recruited and led a team of 15, overseeing four projects/products
+- Coordinated production deployments and hot-fixes
+- Automated AWS services using shell scripts and Lambda functions
+- Conducted workshops on new AWS services
+
+Synechron Technologies Limited
+- Administered Linux media servers and provided application support
+- Automated tasks via shell scripting and MySQL database
+- Troubleshot customized applications
+
+Tsys Limited
+- Managed user access for various development and production servers
+- Implemented MySQL replication and application fine-tuning
+- Developed and debugged automation scripts
+
+Patni Computer Systems Limited
+- Provided administrative support and monitored P8 Filenet applications
+- Managed Linux Proxy servers and MySQL databases
+- Created SQL queries and handled Oracle database operations
+
+Education:
+Post Graduate Diploma in Information Technology, Symbiosis Institute, Pune, Maharashtra, January 2013
+Bachelor of Engineering in Electronics and Telecommunications, Pune University, Pune, Maharashtra, January 2007
+
+Certifications:
+- B1 Visa (USA)
+
+Additional Information:
+- Onsite visits to Sweden & US (Seattle)
+- Excellent communicator with experience in cross-functional collaboration
+- Eager to learn and adapt to new technologies and frameworks
+
+References:
+Available upon request.

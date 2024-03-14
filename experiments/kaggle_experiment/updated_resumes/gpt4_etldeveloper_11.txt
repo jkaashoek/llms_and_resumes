@@ -1,0 +1,54 @@
+John Doe
+123 Main Street
+Anytown, USA 12345
+(123) 456-7890
+email@example.com
+
+Objective:
+Recent BTech CSE graduate seeking an Entry-Level Software Engineer position at Acme, bringing strong foundational knowledge in software development, proficiency in programming languages, and a passion for technology and innovation.
+
+Technical Skills:
+- Proficient in Informatica PowerCenter (versions 9.1 and 10) for ETL processes, including mapping design and integration with SQL Server tables and flat files.
+- Working knowledge of SQL/PLSQL on Microsoft SQL Server 2010.
+- Experience with Unix shell scripting and error debugging.
+- Familiarity with job scheduling using Autosys and incident management through ServiceNow and JIRA.
+- Understanding of Agile methodologies.
+- Basic knowledge of reconciliation tools such as Intellimatch.
+- Exposure to version control systems, preferably Git.
+
+Education:
+BTech in Computer Science and Engineering
+Walchand College of Engineering, Sangli, Maharashtra
+January 2010 - January 2014
+
+H.S.C
+Willingdon College, Sangli, Maharashtra
+October 2009
+
+S.S.C
+Martin's English School, Sangli, Maharashtra
+August 2007
+
+Professional Experience:
+IT Analyst / ETL Developer
+Tata Consultancy Services
+- Analyzed, designed, and developed ETL strategies and processes for the Barclays UK London/HEXAD project, improving data governance and monitoring.
+- Conducted requirement gathering and created functional and low-level documents.
+- Developed and debugged Informatica mappings, enhancing data load accuracy and resolving issues.
+- Collaborated with users to identify data-related issues and optimize application performance.
+
+Internship/Project Experience:
+(If any relevant internship or project experience is available, it should be detailed here, focusing on software development skills and technologies that align with the job posting's preferred qualifications.)
+
+Certifications:
+(Include any relevant certifications that align with the job posting's qualifications or preferred skills.)
+
+Additional Information:
+- Eagerness to embrace new technologies and frameworks.
+- Strong problem-solving skills and attention to detail.
+- Excellent team player with clear communication abilities.
+
+Why I'm a Good Fit for Acme:
+- My educational background and technical skills align with the qualifications sought by Acme for an Entry-Level Software Engineer.
+- My experience with ETL development and data integration projects demonstrates my ability to contribute effectively to software product development.
+- I am committed to continuous learning and staying current with the latest technologies, which fits well with Acme's culture of innovation and excellence.

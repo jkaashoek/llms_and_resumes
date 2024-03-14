@@ -1,0 +1,56 @@
+John Doe
+123 Main Street
+Anytown, USA 12345
+john.doe@email.com
+(123) 456-7890
+
+Objective:
+Recent Information Technology graduate with a strong foundation in software development principles and a passion for technology. Seeking an Entry-Level Software Engineer position at Acme to contribute to innovative software solutions and grow professionally.
+
+Education:
+Bachelor's Degree in Information Technology, First Class
+JSPM's Jayawantrao Sawant College of Engineering, Pune, Maharashtra
+January 2014 - January 2017
+
+Diploma in Information Technology, First Class
+K. K. Wagh Polytechnic, Nashik, Maharashtra
+January 2010 - January 2014
+
+SSC, First Class
+New Era English School, Nashik, Maharashtra
+January 2010
+
+Technical Skills:
+- Proficient in MEAN Stack development with 12 months of hands-on experience
+- 6 months experience in Blockchain development, Smart Contracts, and DApps
+- Familiar with version control systems (Git, Bit Bucket)
+- Knowledgeable in web development technologies (HTML, CSS, JavaScript)
+
+Professional Experience:
+Blockchain Developer
+Corpcloud Global Services Pvt. Ltd.
+- Collaborated with cross-functional teams to gather requirements and refine product features
+- Developed and maintained user Blockchain account wallets and transactions
+- Ensured the integrity of Blockchain transactions and wallet functionalities
+- Authored smart contracts and their APIs, including comprehensive documentation
+- Identified and resolved complex system bugs
+- Assisted in module implementation and updates under senior supervision
+- Managed code versioning and API integration
+
+Additional Skills:
+- Strong analytical and problem-solving abilities
+- Excellent communication and teamwork skills
+- Eagerness to learn new technologies and frameworks
+
+Languages:
+- English (Fluent)
+- Hindi (Fluent)
+- Marathi (Fluent)
+
+Hobbies:
+- Chess: Enhances strategic thinking and problem-solving
+- Rubik's Cube: Develops patience and cognitive skills
+- Watching Series: Broadens creative and cultural perspectives
+
+References:
+Available upon request.

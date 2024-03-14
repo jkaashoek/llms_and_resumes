@@ -1,0 +1,42 @@
+Jane Doe
+
+Contact Information:
+Email: jane.doe@email.com | Phone: (555) 123-4567 | LinkedIn: linkedin.com/in/janedoe
+
+Objective:
+A detail-oriented and innovative web designer with a Bachelor's degree in Computer Science Engineering and extensive experience in web technologies seeking an Entry-Level Software Engineer position at Acme. Aim to leverage my technical skills and collaborative approach to contribute to the development and maintenance of transformative software solutions.
+
+Technical Skills:
+- Programming Languages: JavaScript, Java (Basic)
+- Web Technologies: AngularJS, HTML5, CSS3, SASS, Bootstrap, jQuery
+- Software Tools: Visual Studio Code, Brackets, Photoshop
+- Version Control: Git (Basic)
+
+Education:
+B.E. in Computer Science Engineering
+G.H. Raisoni College of Engineering, Nagpur, Maharashtra
+January 2015
+
+Professional Experience:
+
+Web Designer
+Trust Systems and Software | Dates: Month 20XX - Month 20XX
+- Revamped UI for TrustBank-CBS, enhancing usability and maintainability for bank operations.
+- Led UI guideline integration for a development team of 50, ensuring project completion within the deadline.
+- Developed responsive UI for Loan Bazar and Capital Security Bond Application, streamlining loan processes and gold bond purchases online.
+- Created the UI for SoftGST, assisting tax payers and vendors in generating GSTR returns and reconciling GSTR 2A with purchase register.
+- Contributed to the mobile web app Trust Analytica by designing the landing page and aiding developers in UI implementation.
+- Successfully designed and deployed websites for various clients including TSR Technology Services, Vidarbha Merchants Urban Co-Op Bank, and GISSS.
+
+Freelance Web Designer
+- Developed and hosted websites for Jallosh Band and An Endeavor Foundation, meeting client specifications and deadlines.
+- Managed client interactions and digital data for 10MagicalFingers, catering to both national and international clients.
+
+Additional Achievements:
+- Winner, Photography Competition 'Click', Maharashtra State Board, October 2009
+- Contributed as a Web Designer for College Magazine 'OCEAN'
+
+Professional Development:
+- Actively pursuing further knowledge in web development technologies and software engineering best practices.
+- Engaged in continuous learning to enhance proficiency in new programming languages and frameworks.
+

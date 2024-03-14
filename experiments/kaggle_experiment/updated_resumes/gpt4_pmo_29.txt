@@ -1,0 +1,65 @@
+John Doe
+123 Your Street
+Your City, ST 12345
+(123) 456-7890
+john.doe@email.com
+
+Objective:
+Aspiring Entry-Level Software Engineer with a strong foundation in software development and a passion for technology. Eager to contribute to innovative projects and collaborate with a dynamic team at Acme. Committed to continuous learning and excellence in delivering high-quality software solutions.
+
+Education:
+Bachelor of Business Administration, Business Administration
+Modern College, Pune, Maharashtra — January 2005
+HSC
+S.S.P.M.S College, Pune, Maharashtra
+SSC
+Saints High School, Pune, Maharashtra
+
+Professional Experience:
+Capita India Pvt Ltd, Pune — Project Management Officer
+January 2016 - Present
+- Led the successful transition of knowledge, systems, and operating capabilities for various clients.
+- Collaborated with UK team to understand and execute PMO processes offshore.
+- Managed and developed a team of 6, fostering new documentation processes and ways of working.
+- Engaged with internal and external stakeholders to ensure robust operations and resource execution.
+
+Saviant Technologies — PMO Lead
+January 2014 - December 2015
+- Established a PMO, providing leadership and implementing resource management processes.
+- Oversaw program financials, risk management, and client communications.
+- Contributed to the development of innovative solutions to complex client needs.
+
+Infosys, Pune — Project Management Specialist
+January 2012 - December 2013
+- Managed resource allocation, budgeting, and billing processes.
+- Automated reporting and analyzed data to support decision-making.
+- Conducted reviews of project documentation and facilitated risk mitigation strategies.
+
+Technical Skills:
+- Proficient in Java, C++, and Python.
+- Familiar with HTML, CSS, JavaScript, and React framework.
+- Strong understanding of SDLC and Agile methodologies.
+- Advanced skills in MS Office, particularly in Excel data analysis and macros.
+
+Certifications:
+- Certified Scrum Master (CSM)
+
+Projects:
+- Developed a web application for a university project using Java and Angular.
+- Contributed to an open-source project on GitHub, enhancing features and fixing bugs.
+
+Skills:
+- Strong analytical and problem-solving abilities.
+- Excellent time management and organizational skills.
+- Effective multitasking in fast-paced environments.
+- Proven leadership and interpersonal communication skills.
+
+Awards:
+- Received 'Best Project Management Officer' award for excellence in transition management at Capita India Pvt Ltd.
+
+Interests:
+- Continuous personal and professional development.
+- Engaging with tech communities and contributing to software development forums.
+
+References:
+Available upon request.

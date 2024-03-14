@@ -1,0 +1,53 @@
+John Doe
+1234 Elm Street
+Anytown, State 12345
+john.doe@email.com
+(123) 456-7890
+
+PROFESSIONAL SUMMARY
+Skilled QA Automation Lead with extensive experience in designing, developing, and implementing automation frameworks and testing strategies across various domains. Proficient in multiple programming languages and automation tools, with a strong background in Agile methodologies and a commitment to improving software quality.
+
+SKILLS
+- Agile Methodologies: Scrum, Kanban, Extreme Programming (XP), Test-Driven Development (TDD), Feature-Driven Development (FDD)
+- Domains: Industrial Automation, Retail, Banking, Insurance, Healthcare
+- Automation Frameworks: Modular, Data-Driven, BPT, Hybrid
+- Automation Tools: HP UFT, TAF, Load Runner, Selenium, Rational Robot, DCMTK, Sikuli
+- Programming Languages: VB Script, C++, Python, Shell Script
+- Bug Tracking Tools: Bugzilla, Jira, HP Quality Control, AP Test, Clear Quest
+- Version Management: Clear Case, Win CVS, SVN
+- Databases: Oracle, SQL Server, MySQL
+- Network Protocols: TCP/IP, HTTP, HTTPS, VPN, FTP, LDAP
+- Healthcare Technologies: DICOM, PACS, HL7, Image Archiving, Image Reconstruction
+- Industrial Automation Tools: Rockwell Automation Logix Designer, Factory Talk, RSLinx Classic, Control Flash, Compare Tool, I/O Modules, Profiles
+
+EDUCATION
+Bachelor of Science in Computer Science
+Mumbai University, Mumbai, Maharashtra
+
+PROFESSIONAL EXPERIENCE
+QA Automation Lead, Leading Industrial Automation Company
+- Led QA efforts for embedded systems testing, developing test strategies and plans in an Agile environment.
+- Documented and published program increment objectives, planning reports, feature epics, backlogs, and stories.
+- Conducted and participated in all Agile ceremonies, ensuring continuous improvement and adherence to best practices.
+- Designed, created, and maintained automation test scripts using TAF, enhancing test coverage and efficiency.
+- Collaborated closely with cross-functional teams to ensure resolution of bugs and improve software quality.
+
+QA Automation Engineer, GE Healthcare
+- Validated CT scanners and PACS applications against FDA compliance and regulations.
+- Created and executed manual and automated test cases, increasing productivity through the use of automation tools.
+- Trained team members on automation test creation and execution, contributing to knowledge sharing and team development.
+
+QA Analyst, HDFC Bank Limited
+- Reviewed business requirements and design documents to prepare comprehensive test cases.
+- Performed various types of testing, including API, functional, integration, system, performance, regression, and security.
+- Automated test flows using QTP, improving testing processes and release support.
+
+QA Tester, Vistaar Systems Limited
+- Analyzed business and technical documents to develop manual and automated test cases.
+- Conducted regression, performance, and database testing using Rational Robot, QTP, and Shell scripting to ensure product quality.
+
+ADDITIONAL INFORMATION
+- Proactive in learning new technologies and frameworks.
+- Excellent problem-solving skills and attention to detail.
+- Strong communication skills, both verbal and written.
+- Able to work effectively in a team environment.

@@ -1,0 +1,48 @@
+Education:
+Bachelor of Engineering (B.E.), Computer Science, July 2008 - February 2012
+Nagpur University, Nagpur, Maharashtra
+
+Professional Experience:
+
+SAP HANA Developer
+Schlumberger, February 2017 - Present
+- Lead development on SAP HANA systems, focusing on Suit on HANA and Native HANA.
+- Managed end-to-end implementation for software releases, including performance tuning and production support.
+- Designed and implemented HANA Information Models, including Calculation Views, Table Functions, and Procedures.
+- Collaborated with cross-functional teams to understand business requirements and translated them into technical specifications.
+- Contributed to the successful launch of financial self-service projects and developed reports using SAP Analysis for Office and Power BI.
+- Utilized HPALM and Remedy Tools for incident management and defect resolution.
+- Enhanced system performance by optimizing HANA views and managing object promotion across environments.
+
+SAP HANA Data Model Developer
+Fujitsu Consulting India, Aero Space Design/Honeywell Project
+- Developed and modified HANA data models to meet business requirements.
+- Prepared technical documentation and provided estimates for data model creation.
+- Optimized data integration using SLT and SDA, and addressed complex performance issues.
+- Modified existing models and configured business objects for data retrieval from HANA.
+
+SAP BO Developer
+Fujitsu Consulting India, McDonald's Client, July 2013 - June 2014
+- Estimated and developed SAP BO Universes and Web Intelligence Reports.
+- Implemented row-level and folder-level security for reports and managed report scheduling.
+
+Technical Skills:
+- SAP HANA SPS12
+- SAP ECC 6.0
+- SQL
+- SAP BusinessObjects Web Intelligence (WEBI)
+- Power BI
+- Version control systems (Git)
+- Incident management tools: HPALM, Remedy
+- Collaboration tools: SharePoint, SAP Logon
+
+Certifications and Training:
+- SAP Certified Application Associate - SAP HANA (if applicable)
+- Agile Development Methodologies
+- Version Control with Git (if applicable)
+
+Additional Skills:
+- Strong analytical and problem-solving abilities.
+- Excellent communication and team collaboration skills.
+- Proven ability to work in fast-paced, dynamic environments.
+- Eagerness to learn new technologies and frameworks.

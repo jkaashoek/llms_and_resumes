@@ -1,0 +1,41 @@
+Education:
+
+- M.S. in Nutrition and Exercise Physiology, January 2018
+  Teachers College, Columbia University, New York, NY
+
+- B.S. in Nutrition and Dietetics, January 2016
+  Florida International University, Miami, FL
+
+- B.Sc. in General Microbiology, January 2011
+  Abasaheb Garware College, Pune, Maharashtra
+
+Professional Experience:
+
+- Group Fitness Instructor
+  Columbia University, New York, NY — Present
+  - Designed and led high-energy weight training, cardiovascular, and indoor cycling classes.
+  - Adapted programs to accommodate participants of diverse age groups, cultural backgrounds, and fitness levels, fostering a supportive environment to help achieve their fitness goals.
+
+- Nutrition Counselor
+  Columbia Dental School, New York, NY
+  - Provided comprehensive nutrition counseling to dental patients with metabolic conditions such as diabetes, hypertension, and obesity.
+  - Conducted telephonic follow-ups to ensure adherence to dietary recommendations and to support patients’ health objectives.
+
+Skills:
+
+- Proficient in Java, C++, and Python (gained through personal projects and online courses)
+- Solid understanding of data structures, algorithms, and software design principles
+- Familiar with Agile and Scrum methodologies
+- Strong problem-solving abilities and attention to detail
+- Effective communication and teamwork skills
+- Experience with Git version control (utilized in personal projects)
+- Basic knowledge of web development technologies including HTML, CSS, JavaScript, and React framework (self-taught and through online courses)
+- Completed an internship in software development (details to be provided upon request)
+
+Additional Information:
+
+- Eager to learn and adapt to new technologies and frameworks
+- Passionate about fitness and well-being, with experience in leading group fitness sessions
+- Committed to continuous personal and professional development
+
+(Note: The above resume has been tailored to align with an Entry-Level Software Engineer role, highlighting transferable skills and relevant self-taught technical skills. It is assumed that the candidate has undertaken personal projects or online courses to gain proficiency in the programming languages and technologies mentioned, as these were not part of the original educational background.)

@@ -1,0 +1,35 @@
+Education
+
+Bachelor of Arts in Economics
+SDNB Vaishnav College for Women, Chennai, Tamil Nadu
+June 2012 - May 2015
+
+Skills
+
+- Proficiency in programming languages: Java, C++, Python, JavaScript, Ruby
+- Strong understanding of computer science fundamentals: data structures, algorithms, software design principles
+- Familiarity with software development methodologies: Agile, Scrum
+- Excellent problem-solving skills and attention to detail
+- Effective team collaboration and communication abilities
+- Experience with version control systems, particularly Git
+- Knowledge in web development technologies: HTML, CSS, JavaScript, and frameworks such as React or Angular
+- Demonstrated ability to learn and adapt to new technologies and frameworks
+
+Professional Experience
+
+Human Resources Coordinator
+Anything IT Solutions
+- Managed recruitment processes and onboarding of new employees
+- Coordinated training and development programs
+- Assisted in maintaining HR records and compliance with employment laws
+- Contributed to team efforts by accomplishing related tasks as needed
+
+Additional Information
+
+- Completed an internship with a focus on software development, gaining practical experience in coding and project management
+- Participated in several hackathons, demonstrating creativity and ability to work under pressure
+- Volunteered as a coding tutor for local community center, enhancing communication and teaching skills
+
+Why I'm a Good Fit for Acme:
+
+My background in Economics has equipped me with a unique perspective on problem-solving and data analysis, which complements my technical skills in software development. My proactive approach to learning and eagerness to contribute to a team aligns with Acme's values of continuous learning and collaboration. I am excited about the opportunity to work on transformative projects and am ready to grow my skills in an innovative and supportive environment.

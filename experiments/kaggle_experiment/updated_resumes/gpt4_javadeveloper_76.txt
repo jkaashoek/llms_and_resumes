@@ -1,0 +1,36 @@
+Skills
+- Programming Languages: Proficient in Java; familiar with C++, Python, JavaScript, and Ruby
+- Operating Systems: Experienced with Windows and Linux (CentOS 6.6)
+- Databases: Knowledgeable in Oracle, MySQL, and Derby (Embedded DB)
+- Integrated Development Environment (IDE): Skilled in using Eclipse (Oxygen)
+- Tools: Proficient with SonarQube, experienced with Putty
+- Version Control: Familiar with Git
+
+Responsibilities
+- Actively participated in requirements gathering and design development sessions to ensure clear understanding of project objectives
+- Conducted thorough code reviews and performed debugging tasks to enhance application performance
+- Worked closely with system partners to finalize designs and verify requirements, ensuring alignment with project goals
+- Delivered on all production work orders, consistently meeting deadlines and project requirements
+- Collaborated with fellow developers to reduce software bugs, providing maintenance and development of bug fixes and updates for existing applications
+
+Education
+- Bachelor of Engineering (Computer Science), Savitribai Phule Pune University
+
+Professional Experience
+Java Developer, Aurus Tech Pvt. Ltd
+- Duration: 2 years
+- Key Contributions: Developed and maintained payment gateway solutions, focusing on Core Java
+- Teamwork: Excelled in a multicultural team environment, contributing to a cooperative and productive work atmosphere
+
+Skill Details
+- Java: 32 months of experience
+- Linux: 6 months of experience
+- Advanced Java: Less than 1 year
+- Derby: Less than 1 year
+- Oracle: Less than 1 year
+
+Company Details
+- Aurus Tech Pvt. Ltd
+- Role: Java Developer
+- Experience: 2 years
+- Description: Gained valuable experience in payment gateway solutions, emphasizing Core Java development and team collaboration

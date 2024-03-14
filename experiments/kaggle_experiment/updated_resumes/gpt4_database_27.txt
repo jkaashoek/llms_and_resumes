@@ -1,0 +1,56 @@
+John Doe
+123 Main Street | Anytown, USA | johndoe@email.com | (123) 456-7890
+
+PROFESSIONAL SUMMARY
+
+Detail-oriented and results-driven Database Administrator with a solid background in database management and administration, including experience with Oracle, MySQL, MariaDB, and PostgreSQL. Proven ability to maintain and enhance database performance, ensure data integrity, and support complex database environments. Skilled in troubleshooting, optimizing SQL queries, and implementing robust backup and recovery procedures. Seeking to leverage my technical expertise and 17 months of hands-on experience to contribute to the innovative software solutions at Acme as an Entry-Level Software Engineer.
+
+TECHNICAL SKILLS
+
+- Database Administration: Oracle (10g, 11g), MySQL, MariaDB, PostgreSQL
+- Programming Languages: SQL
+- Operating Systems: Windows, Linux
+- Tools: Putty
+
+EDUCATION
+
+Master of Computer Science (MCS), January 2018
+Pune University, Pune, Maharashtra
+
+PROFESSIONAL EXPERIENCE
+
+Database Administrator
+Infiniteworx Omnichannel Pvt. Ltd, Pune | September 2017 - Present
+
+- Managed tablespaces, monitored growth, and planned data locations to optimize database performance.
+- Set up and maintained database replication processes.
+- Implemented schema changes and managed database environments for staging.
+- Provided DBA support and resolved complex queries.
+- Created users and managed permissions to ensure database security.
+- Led database recovery efforts and data file relocations.
+- Designed and executed backup policies tailored to database criticality.
+- Performed data import/export operations and schema design.
+
+Key Achievements:
+
+- Delivered 24/7 support to address database performance issues, job failures, and session management, improving system reliability.
+- Installed, configured, and updated Oracle server software and related products, as well as MySQL, SQL Server, MariaDB, and MongoDB.
+- Administered Oracle Databases of large sizes across production, development, and test environments.
+- Maintained tablespaces, data files, control files, and online redo log files to ensure database integrity.
+- Conducted Oracle RMAN backups, including incremental, cumulative, and full backups, to optimize space management and recovery.
+- Monitored system logs, diagnosed root causes of errors, and executed DDL & DML scripts per customer requirements.
+- Mentored and trained team members, contributing to recruitment and project documentation.
+- Ensured adherence to quality standards and spearheaded project activities for on-time completion.
+- Implemented security policies and managed user privileges across various database systems.
+
+ADDITIONAL EXPERIENCE
+
+Database Administrator (Contract)
+Innovative Technologies, Banking Domain Clients
+
+- Provided database administration services for banking sector clients, focusing on security and compliance.
+
+CERTIFICATIONS
+
+(If applicable, list relevant certifications here)
+

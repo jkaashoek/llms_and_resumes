@@ -1,0 +1,40 @@
+Education:
+
+Bachelor of Science in Information Technology, January 2016
+University of Mumbai, Mumbai, Maharashtra
+
+Higher Secondary Certificate (HSC), January 2012
+Allahabad University, Allahabad, Uttar Pradesh
+
+Secondary School Certificate (SSC) with a focus on .NET, January 2010
+Allahabad University, Allahabad, Uttar Pradesh
+
+Professional Experience:
+
+Software Developer Trainer, NetTech India
+- Duration: 12 months
+- Responsibilities: Designed and developed web applications, trained new developers in web design and PHP.
+- Achievements: Successfully trained 30+ students in modern web development technologies.
+- Salary: ₹12,000 per month
+
+Web Designer and Developer, EPI Center Academy
+- Duration: Contract-based
+- Responsibilities: Created and maintained websites, ensuring responsiveness and user-friendly design.
+
+Web Designer and Developer, Aptech Charni Road
+- Duration: Contract-based
+- Responsibilities: Developed and implemented website features according to client specifications.
+
+Skills:
+
+- Web Design: 12 months of experience
+- PHP: 12 months of experience
+- Proficient in HTML, CSS, JavaScript, and responsive design principles
+- Familiar with React and Angular frameworks
+- Understanding of version control systems, including Git
+
+Personal Interests:
+
+- Enjoy listening to music, surfing the internet, watching movies, and playing cricket
+
+Note: The candidate's resume has been tailored to highlight relevant skills and experiences for the Entry-Level Software Engineer position at Acme. The professional experience section emphasizes hands-on web development and training roles, which align with the job posting's preference for candidates with practical experience and the ability to work in a team environment. The skills section has been updated to reflect proficiency in key programming languages and a familiarity with software development methodologies, catering to the qualifications outlined in the job posting.

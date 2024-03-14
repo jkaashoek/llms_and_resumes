@@ -1,0 +1,58 @@
+John Doe
+1234 Elm Street, Apt. 56
+New York, NY, 10001
+(123) 456-7890
+john.doe@email.com
+
+Objective:
+Aspiring Entry-Level Software Engineer with a strong foundation in software development and a passion for technology. Eager to join Acme's dynamic team to contribute to innovative software solutions and grow professionally in a collaborative environment.
+
+Education:
+Bachelor of Business Administration
+ICFAI Business School, Graduated 2019
+
+Senior Secondary School
+Delhi Public School, Graduated 2015
+
+Technical Skills:
+- Proficient in programming languages such as Java, C++, Python, and JavaScript
+- Strong understanding of data structures, algorithms, and software design principles
+- Familiar with Agile and Scrum software development methodologies
+- Experience with version control systems, particularly Git
+- Knowledgeable in web development technologies: HTML, CSS, JavaScript, React, Angular
+
+Professional Experience:
+Senior Manager - PMO
+Company XYZ (confidential), Dates of Employment
+- Led process reengineering projects to improve efficiency and effectiveness
+- Developed functional requirements for business process improvements
+- Managed project scope, timelines, and stakeholder communications
+
+Documentation Specialist
+Company XYZ (confidential), Dates of Employment
+- Responsible for creating and maintaining comprehensive project documentation
+- Trained stakeholders on new process changes
+
+Sales Associate
+Teleperformance India, Dates of Employment
+- Drove sales through call center operations, meeting and exceeding targets
+- Implemented sales promotional activities and trained new staff
+
+Additional Skills:
+- Exceptional communication and networking abilities
+- Proven ability to work well both independently and in team settings
+- Skilled at multitasking and working under pressure
+
+Projects:
+- Developed a web-based application using JavaScript frameworks for a university project
+- Contributed to an open-source project on GitHub, gaining hands-on experience with Git
+
+Certifications:
+- Certified Scrum Master (CSM), Scrum Alliance
+
+Interests:
+- Continuous learning and professional development in software engineering
+- Participating in coding challenges and hackathons
+
+References:
+Available upon request.
