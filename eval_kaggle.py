@@ -38,7 +38,7 @@ for f in os.listdir(resume_dir):
 print(len(resumes))
 # -
 
-n_resumes = 50
+n_resumes = 100
 idxs = np.random.choice(len(resumes), n_resumes, replace=False)
 resumes_filt = [resumes[i] for i in idxs]
 print(len(resumes_filt))
@@ -205,8 +205,8 @@ for c in col_combos:
     for i, suff in enumerate(['_original', '_updated']):
         s1, s2 = c[0] + suff, c[1] + suff
         axs[0, i].hist(all_scores[s1].values - all_scores[s2].values, bins=20, alpha=0.5, label=s1)
-        axs[1, 0].hist(all_scores[s1].values, bins=20, alpha=0.5, label=suff)
-        axs[1, 1].hist(all_scores[s2].values, bins=20, alpha=0.5, label=suff)
+        axs[1, 0].hist(all_scores[s1].values, bins=20, alpha=0.5, label=suff[1:])
+        axs[1, 1].hist(all_scores[s2].values, bins=20, alpha=0.5, label=suff[1:])
         axs[0, i].set_title(f"{s1} - {s2}")
         axs[1, 0].set_title(c[0])
         axs[1, 1].set_title(c[1])
@@ -220,6 +220,12 @@ for c in col_combos:
     # plt.title(f"{s1} - {s2}")
     # plt.ylabel(c[1])
     plt.show()
-# -
+# +
 
+for c in col_combos:
+    plt.figure()
+    plt.hist((all_scores[c[0] + '_updated'].values - all_scores[c[0] + '_original'].values) - (all_scores[c[1] + "_updated"].values - all_scores[c[1] + '_original'].values),
+              bins=list(range(-10,10)), alpha=0.5)
+    plt.title(f"Diff in diff, {c[0]} and {c[1]}")
+    plt.show()
 
