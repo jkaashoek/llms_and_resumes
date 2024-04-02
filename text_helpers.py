@@ -6,40 +6,80 @@ import os
 class TextObj():
     def __init__(self, fp, lazy_loading = True) -> None:
         self.fp = fp
-        self.lazy = lazy_loading
-        self.text_name = fp[:-4]
+        self.text_name = fp.split('/')[-1][:-4]
         self.text, self.cleaned_text, self.summary = None, None, None
 
         if not lazy_loading:
-            self.text, self.cleaned_text = self.extract_text()
-            question, agent = TextObj.summarize(self.cleaned_text)
-            self.summary = question.by(agent).by('edsl_model').run().select(question.question_name).to_list()[0]
+            print("Extracting, cleaning, and summarizing")
+            self.text = self.extract_text(self.fp)
+                    
+            # Clean
+            self.clean_question, self.clean_agent = TextObj.llm_clean_text(self)
+            self.cleaned_text = TextObj.run_and_get(self.clean_question, self.clean_agent, Model('gpt-4-1106-preview'))
+
+            # Summarize
+            self.summ_question, self.summ_agent = TextObj.summarize(self)
+            self.summary = TextObj.run_and_get(self.summ_question, self.summ_agent, Model('gpt-4-1106-preview')) 
 
         return
     
-    def extract_text(self, clean_text = False):
+    def set_text(self, text, cleaned_text) :
+        '''
+        Sets the text of a text object
+        '''
+        self.text = TextObj.extract_text(self.fp)
+        self.cleaned_text = TextObj.run_and_get(self.clean_question, self.clean_agent, Model('gpt-4-1106-preview'))
+        return self.text, self.cleaned_text
+    
+    def update_text(self, text, cleaned_text):
+        '''
+        Updates the text of a text object
+        '''
+        self.text = text
+        self.cleaned_text = cleaned_text
+        return self.text, self.cleaned_text
+    
+    def update_summarize_prompts(self, new_agent, new_question):
+        '''
+        Updates the EDSL prompts for summarizing
+        '''
+        self.summ_agent = new_agent
+        self.summ_question = new_question
+        return
+    
+    def update_clean_prompts(self, new_agent, new_question):
+        '''
+        Updates the EDSL prompts for cleaning
+        '''
+        self.clean_agent = new_agent
+        self.clean_question = new_question
+        return
+    
+    def set_summary(self, summary):
+        self.summary = summary
+        return
+    
+    @staticmethod
+    def extract_text(fp):
         '''
         Extracts text from a text object
         '''
-        filename = os.fsdecode(self.fp)
+        filename = os.fsdecode(fp)
         if filename.endswith(".pdf"):
-            reader = PdfReader(self.fp)
+            reader = PdfReader(fp)
             text = ''
             for page in reader.pages:
                 text += page.extract_text() + '\n'
 
         elif filename.endswith('.txt'):
-            with open(self.fp, 'r') as file:
+            with open(fp, 'r') as file:
                 text = file.read()
-        
-        self.text = text
-        self.cleaned_text = self.llm_clean_text(text) if clean_text else text
 
-        return self.text, self.cleaned_text
-    
-    def set_summary(self, summary):
-        self.summary = summary
-        return
+        return text
+
+    @staticmethod 
+    def run_and_get(question, agent, model):
+        return question.by(agent).by(model).run().select(question.question_name).to_list()[0]
 
     @staticmethod
     def llm_clean_text(text_obj, person_instructions = 'You are an expert in formatting text.'):
@@ -47,7 +87,7 @@ class TextObj():
         Cleans text using an LLM model
         '''
         agent = Agent(traits={'role': 'improver', 'persona': person_instructions})
-        question = QuestionFreeText(question_name = f'llm_clean_{text_obj.text_name}', question_text = 'Nicely format the following text. Do not change any of the details, only fix spelling or grammar mistakes and fix formatting issues. Output only the cleaned text.\n\n' + text_obj.cleaned_text)
+        question = QuestionFreeText(question_name = f'llm_clean_{text_obj.text_name}', question_text = 'Nicely format the following text. Do not change any of the details, only fix spelling or grammar mistakes and fix formatting issues. Output only the cleaned text.\n\n' + text_obj.text)
         return question, agent
     
     @staticmethod
@@ -60,16 +100,14 @@ class TextObj():
         return self.text
 
 class Resume(TextObj):
-    def __init__(self, resume_path) -> None:
+    def __init__(self, resume_path, lazy_loading = True) -> None:
         self.modifications = []
-        super().__init__(resume_path)
+        super().__init__(resume_path, lazy_loading)
 
-    def extract_text(self, clean_text = False):
-        return super().extract_text(clean_text)
 
     def summarize(self):
         persona_instructions = 'You are an expert recruiter who has been hired to summarize resumes for hiring managers to make decisions on who to hire.'
-        return super().summarize(person_instructions = persona_instructions)
+        return TextObj.summarize(self, persona_instructions = persona_instructions)
     
     def add_modification(self, modification): 
         self.modifications.append(modification)
@@ -87,15 +125,12 @@ class Resume(TextObj):
         return agent, question
 
 class JobDescription(TextObj):
-    def __init__(self, job_description_path) -> None:
-        super().__init__(job_description_path) 
-
-    def extract_text(self):
-        return super().extract_text()
+    def __init__(self, job_description_path, lazy_loading = True) -> None:
+        super().__init__(job_description_path, lazy_loading) 
 
     def summarize(self):
         persona_instructions = 'You are an expert recruiter who has been hired to summarize job descriptions for hiring managers to make decisions on who to hire.'
-        return super().summarize(person_instructions = persona_instructions)
+        return TextObj.summarize(self, persona_instructions = persona_instructions)
 
     # def evaluate_resume(self, resume : Resume):
     #     '''
@@ -212,19 +247,17 @@ class TextPool():
 
 
 # Example usage
-resume = Resume('resumes/business_resume.pdf')
+# resume = Resume('resumes/business_resume.pdf')
+resume = Resume('resumes/engineering_resume.pdf', lazy_loading = False)
 # print("no cleaning")
-text, cleaned = resume.extract_text(True)
+text, cleaned = resume.text, resume.cleaned_text
 # print(resume.extract_text(False))
 # print("with cleaning")
 # print(resume.extract_text(True))
-with open('resumes/business_resume_cleaned.txt', 'w') as f:
+with open('resumes/engineering_resume_cleaned.txt', 'w') as f:
     f.write(cleaned)
 
-with open('resumes/business_resume_not_cleaned.txt', 'w') as f:
+with open('resumes/engineering_resume_not_cleaned.txt', 'w') as f:
     f.write(text)
 
-print("summarized")
-summ = resume.summarize()
-print(summ)
-print(resume.text_summary)
+print(resume.summary)
