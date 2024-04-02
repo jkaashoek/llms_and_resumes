@@ -40,14 +40,6 @@ class TextObj():
     def set_summary(self, summary):
         self.summary = summary
         return
-    
-    # @staticmethod
-    # def run_edsl(agent, model, question):
-    #     '''
-    #     Runs an EDSL question
-    #     '''
-    #     res = question.by(agent).by(model).run()
-    #     return res
 
     @staticmethod
     def llm_clean_text(text_obj, person_instructions = 'You are an expert in formatting text.'):
@@ -64,7 +56,6 @@ class TextObj():
         question = QuestionFreeText(question_name = f'summarize_{text_obj.text_name}', question_text = 'Summarize the following text.\n\n' + text_obj.cleaned_text)
         return question, agent
 
-    
     def __str__(self) -> str:
         return self.text
 
@@ -203,7 +194,6 @@ class TextPool():
     
 
     # Now evaluate the texts against some other text
-    
 
 # def evaluate_texts(text1 : str, text2 : list[str], model = 'gpt-4-1106-preview', eval_options = {}):
 #     '''
