@@ -8,7 +8,7 @@ from sklearn.manifold import TSNE
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 import os
-
+import numpy as np
 class TextObj():
     def __init__(self, fp, lazy_loading = True) -> None:
         self.fp = fp
@@ -126,9 +126,9 @@ class Resume(TextObj):
         Then, use TSNE to plot the embeddings in 2D space
         Plot the first point in red and the rest in black
         '''
-        pca = PCA(n_components=50)
-        pca_emb = pca.fit_transform(embeddings.reshape((-1,1)))
-        X_embedded = TSNE(n_components=2).fit_transform(pca_emb)
+        # pca = PCA(n_components=50)
+        # pca_emb = pca.fit_transform(embeddings.reshape((-1,1)))
+        X_embedded = TSNE(n_components=2,  perplexity = min(5, embeddings.shape[0] - 1)).fit_transform(embeddings)
 
         plt.figure()
 
@@ -144,20 +144,19 @@ class Resume(TextObj):
         return
 
 
-    # def calc_embeddings(self):
-    #     '''
-    #     Calculate embeddings for the resume
-    #     '''
-    #     self.embeddings = embedding_model.encode(self.modifications)
+    def calc_embeddings(self):
+        '''
+        Calculate embeddings for the resume
+        '''
+        self.mod_embeddings = embedding_model.encode(self.modifications)
+        self.orig_embedding = embedding_model.encode(self.text)
+        return self.mod_embeddings, self.orig_embedding
     
     def get_similarities(self, dist_function = cosine):
         '''
         Get similarities between the original resume and the modified resumes
         '''
-        mod_embeddings = embedding_model.encode(self.modifications)
-        orig_embedding = embedding_model.encode(self.text)
-        similarities = [dist_function(orig_embedding, emb) for emb in mod_embeddings]
-        return similarities
+        return [dist_function(self.orig_embedding, emb) for emb in self.mod_embeddings]
 
     def modify_resume(self, agent_instructions : str):
         '''
@@ -328,7 +327,36 @@ class TextPool():
 
 # Example usage
 # resume = Resume('resumes/business_resume.pdf')
-# resume = Resume('resumes/engineering_resume.pdf', lazy_loading = False)
+resume = Resume('resumes/engineering_resume.pdf', lazy_loading = True)
+
+
+
+with open('resumes/extracted_resumes/business_resume.txt', 'r') as f:
+    res2 = f.read()
+
+with open('resumes/extracted_resumes/technology_resume.txt', 'r') as f:
+    res3 = f.read()
+
+with open('resumes/extracted_resumes/health_related_resume.txt', 'r') as f:
+    res4 = f.read()
+
+resume.add_modification(res2)
+resume.add_modification(res3)
+resume.add_modification(res4)
+
+m_emb, o_emb = resume.calc_embeddings()
+print(resume.get_similarities())
+
+# Stack
+emb = np.vstack((m_emb, o_emb))
+
+print(emb.shape)
+
+# Plot
+resume.pca_for_plot(emb)
+
+
+
 # # print("no cleaning")
 # text, cleaned = resume.text, resume.cleaned_text
 # # print(resume.extract_text(False))
