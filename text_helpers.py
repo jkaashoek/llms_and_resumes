@@ -1,6 +1,12 @@
 from PyPDF2 import PdfReader
 from edsl import  Agent, Model, Survey
 from edsl.questions import QuestionFreeText, QuestionLinearScale
+from InstructorEmbedding import INSTRUCTOR
+from scipy.spatial.distance import cosine
+from consts import embedding_model 
+from sklearn.manifold import TSNE
+from sklearn.decomposition import PCA
+import matplotlib.pyplot as plt
 import os
 
 class TextObj():
@@ -113,6 +119,45 @@ class Resume(TextObj):
     def add_modification(self, modification): 
         self.modifications.append(modification)
         return
+    
+    def pca_for_plot(self, embeddings):
+        '''
+        First, perform PCA to reduce the number of dimensions
+        Then, use TSNE to plot the embeddings in 2D space
+        Plot the first point in red and the rest in black
+        '''
+        pca = PCA(n_components=50)
+        pca_emb = pca.fit_transform(embeddings.reshape((-1,1)))
+        X_embedded = TSNE(n_components=2).fit_transform(pca_emb)
+
+        plt.figure()
+
+        for i in range(X_embedded.shape[0]):
+            if i == 0:
+                plt.scatter(X_embedded[i, 0], X_embedded[i, 1], color = 'red', label = 'original')
+            else:
+                plt.scatter(X_embedded[i, 0], X_embedded[i, 1], color = 'black', label = 'modified')
+
+        plt.legend()
+        plt.show()
+
+        return
+
+
+    # def calc_embeddings(self):
+    #     '''
+    #     Calculate embeddings for the resume
+    #     '''
+    #     self.embeddings = embedding_model.encode(self.modifications)
+    
+    def get_similarities(self, dist_function = cosine):
+        '''
+        Get similarities between the original resume and the modified resumes
+        '''
+        mod_embeddings = embedding_model.encode(self.modifications)
+        orig_embedding = embedding_model.encode(self.text)
+        similarities = [dist_function(orig_embedding, emb) for emb in mod_embeddings]
+        return similarities
 
     def modify_resume(self, agent_instructions : str):
         '''
