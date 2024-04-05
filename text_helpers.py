@@ -9,12 +9,13 @@ from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 import os
 import numpy as np
+from itertools import combinations
+
 class TextObj():
     def __init__(self, fp, lazy_loading = True) -> None:
         self.fp = fp
         self.text_name = fp.split('/')[-1][:-4]
         self.text = self.extract_text(self.fp)
-        self.cleaned_text = self.text
         self.summary = None
 
         if not lazy_loading:
@@ -23,6 +24,10 @@ class TextObj():
             # Clean
             self.clean_question, self.clean_agent = self.llm_clean_text()
             self.cleaned_text = TextObj.run_and_get(self.clean_question, self.clean_agent, Model('gpt-4-1106-preview'))
+            self.embedding = self.calc_embeddings(self.cleaned_text)
+        else:
+            self.cleaned_text = self.text
+            self.embedding = self.calc_embeddings(self.text)
 
         return
     
@@ -46,6 +51,7 @@ class TextObj():
         Updates the cleaned text of a text object
         '''
         self.cleaned_text = cleaned_text
+        self.embedding = self.calc_embeddings(self.cleaned_text)
         return self.cleaned_text
     
     def update_summarize_prompts(self, new_agent, new_question):
@@ -82,6 +88,13 @@ class TextObj():
         return question, agent
 
     @staticmethod
+    def calc_embeddings(text):
+        '''
+        Calculate embeddings for the text
+        '''
+        return embedding_model.encode(text)
+
+    @staticmethod
     def extract_text(fp):
         '''
         Extracts text from a text object
@@ -116,47 +129,9 @@ class Resume(TextObj):
         persona_instructions = 'You are an expert recruiter who has been hired to summarize resumes for hiring managers to make decisions on who to hire.'
         return super().summarize(persona_instructions = persona_instructions)
     
-    def add_modification(self, modification): 
-        self.modifications.append(modification)
-        return
-    
-    def pca_for_plot(self, embeddings):
-        '''
-        First, perform PCA to reduce the number of dimensions
-        Then, use TSNE to plot the embeddings in 2D space
-        Plot the first point in red and the rest in black
-        '''
-        # pca = PCA(n_components=50)
-        # pca_emb = pca.fit_transform(embeddings.reshape((-1,1)))
-        X_embedded = TSNE(n_components=2,  perplexity = min(5, embeddings.shape[0] - 1)).fit_transform(embeddings)
-
-        plt.figure()
-
-        for i in range(X_embedded.shape[0]):
-            if i == 0:
-                plt.scatter(X_embedded[i, 0], X_embedded[i, 1], color = 'red', label = 'original')
-            else:
-                plt.scatter(X_embedded[i, 0], X_embedded[i, 1], color = 'black', label = 'modified')
-
-        plt.legend()
-        plt.show()
-
-        return
-
-
-    def calc_embeddings(self):
-        '''
-        Calculate embeddings for the resume
-        '''
-        self.mod_embeddings = embedding_model.encode(self.modifications)
-        self.orig_embedding = embedding_model.encode(self.text)
-        return self.mod_embeddings, self.orig_embedding
-    
-    def get_similarities(self, dist_function = cosine):
-        '''
-        Get similarities between the original resume and the modified resumes
-        '''
-        return [dist_function(self.orig_embedding, emb) for emb in self.mod_embeddings]
+    # def add_modification(self, modification): 
+    #     self.modifications.append(modification)
+    #     return
 
     def modify_resume(self, agent_instructions : str):
         '''
@@ -221,8 +196,79 @@ class TextPool():
 
         return
     
-    def get_texts(self):
-        return self.texts
+    def get_similarities(self, orig_text : TextObj, dist_function = cosine):
+        '''
+        Get similarities between the original text and the modified resumes
+        '''
+        return [dist_function(orig_text.embedding, text.embedding) for text in self.texts]
+    
+    # TODO: Should we have a method that calculates the embeddings for all the text objects at once? I'm not sure where exactly the hangup is right now. 
+    # def calc_embeddings(self):
+    #     '''
+    #     Calculate embeddings for all the text objects
+    #     '''
+    #     text = 
+    #     for t in self.texts:
+    #         t.embedding = t.calc_embeddings(t.cleaned_text)
+    #     return
+    
+    def calc_separation(self, dist_function = cosine):
+        '''
+        Calculate the separation between the embeddings
+        '''
+        max_dist = 0
+        for c in combinations(self.texts, 2):
+            dist = dist_function(c[0].embedding, c[1].embedding)
+            if dist > max_dist:
+                max_dist = dist
+        return max_dist
+    
+    def add_text(self, text : TextObj):
+        '''
+        Add a text object to the pool
+        '''
+        self.texts.append(text)
+        self.text_names.append(text.text_name)
+        return
+    
+    def plot_texts(self, label_points = False, kaggle = False):
+        '''
+        First, perform PCA to reduce the number of dimensions
+        Then, use TSNE to plot the embeddings in 2D space
+        Plot the first point in red and the rest in black
+        '''
+        # pca = PCA(n_components=50)
+        # pca_emb = pca.fit_transform(embeddings.reshape((-1,1)))
+        embeddings = np.array([t.embedding for t in self.texts])
+        X_embedded = TSNE(n_components=2,  perplexity = min(5, embeddings.shape[0] - 1)).fit_transform(embeddings)
+
+        plt.figure()
+
+        if kaggle:
+            cats = np.unique([t.text_name.split('_')[0] for t in self.texts])
+            colors = plt.cm.rainbow(np.linspace(0, 1, len(cats)))
+            for cat, color in zip(cats, colors):
+                idx = [i for i, t in enumerate(self.texts) if t.text_name.split('_')[0] == cat]
+                plt.scatter(X_embedded[idx,0], X_embedded[idx,1], color = color, label = cat)
+            plt.legend()
+        else:
+            plt.scatter(X_embedded[:,0], X_embedded[:,1])
+
+            if label_points:
+                for i in range(X_embedded.shape[0]):
+                    plt.text(X_embedded[i, 0], X_embedded[i, 1], self.text_names[i])
+
+
+        # for i in range(X_embedded.shape[0]):
+        #     if i == 0:
+        #         plt.scatter(X_embedded[i, 0], X_embedded[i, 1], color = 'red', label = 'original')
+        #     else:
+        #         plt.scatter(X_embedded[i, 0], X_embedded[i, 1], color = 'black', label = 'modified')
+
+        # plt.legend()
+        plt.show()
+
+        return
     
     @staticmethod
     def clean_survey(survey_res):
@@ -324,76 +370,3 @@ class TextPool():
         res = survey.by(agent).by(models).run()
         return TextPool.clean_eval_results(res.to_pandas())
     
-
-# Example usage
-# resume = Resume('resumes/business_resume.pdf')
-resume = Resume('resumes/engineering_resume.pdf', lazy_loading = True)
-
-
-
-with open('resumes/extracted_resumes/business_resume.txt', 'r') as f:
-    res2 = f.read()
-
-with open('resumes/extracted_resumes/technology_resume.txt', 'r') as f:
-    res3 = f.read()
-
-with open('resumes/extracted_resumes/health_related_resume.txt', 'r') as f:
-    res4 = f.read()
-
-resume.add_modification(res2)
-resume.add_modification(res3)
-resume.add_modification(res4)
-
-m_emb, o_emb = resume.calc_embeddings()
-print(resume.get_similarities())
-
-# Stack
-emb = np.vstack((m_emb, o_emb))
-
-print(emb.shape)
-
-# Plot
-resume.pca_for_plot(emb)
-
-
-
-# # print("no cleaning")
-# text, cleaned = resume.text, resume.cleaned_text
-# # print(resume.extract_text(False))
-# # print("with cleaning")
-# # print(resume.extract_text(True))
-# with open('resumes/engineering_resume_cleaned.txt', 'w') as f:
-#     f.write(cleaned)
-
-# with open('resumes/engineering_resume_not_cleaned.txt', 'w') as f:
-#     f.write(text)
-
-# print(resume.summary)
-
-
-resumes = TextPool('resumes/extracted_resumes/', 'resumes')
-print(resumes)
-# summaries = resumes.summarize_all()
-# print(summaries)
-
-# cleaned_texts = resumes.clean_all()
-# print(cleaned_texts)
-
-
-# for c in cleaned_texts.iterrows():
-#     with open(f'resumes/extracted_resumes/cleaned/{c[1]["question_name"]}_cleaned.txt', 'w') as f:
-#         f.write(c[1]['answer'])
-    # print(c[1]['question_name'])
-    # print(c[1]['answer'])
-    # print('-----\n')
-
-# for t in resumes.texts:
-#     print('-----\n')
-#     print(t.text_name, t.summary)
-        
-job_description = JobDescription('posts/software_engineer_generic.txt', lazy_loading = False)
-eval_options = {
-    'reference' : job_description
-}
-evals = resumes.evaluation(eval_options)
-print(evals)

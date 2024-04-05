@@ -1,6 +1,7 @@
 
 from edsl import Model
 from InstructorEmbedding import INSTRUCTOR
+from sentence_transformers import SentenceTransformer
 
 model_to_str = {
     'gpt-3.5-turbo': 'gpt35',
@@ -14,4 +15,5 @@ model_to_str = {
 if len(model_to_str.keys()) != len(Model.available()):
     raise ValueError('You need to update the model_to_str dictionary')
 
-embedding_model = INSTRUCTOR('hkunlp/instructor-large')
+# embedding_model = INSTRUCTOR('hkunlp/instructor-large')
+embedding_model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
