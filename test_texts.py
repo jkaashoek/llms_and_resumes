@@ -5,19 +5,19 @@ from text_helpers import TextObj, Resume, JobDescription, TextPool
 # resume = Resume('resumes/engineering_resume.pdf', lazy_loading = True)
 
 # Let's use the Kaggle data and not doing any sort of llm or cleaning
-kaggle_dir = 'resumes/kaggle_resumes/'
-kaggle_resumes = TextPool(kaggle_dir, 'resumes')
+# kaggle_dir = 'resumes/kaggle_resumes/'
+# kaggle_resumes = TextPool(kaggle_dir, 'resumes')
 
 # Separation
-print("All kaggle separation", kaggle_resumes.calc_separation())
-kaggle_resumes.plot_texts(label_points = True, kaggle = True)
+# print("All kaggle separation", kaggle_resumes.calc_separation())
+# kaggle_resumes.plot_texts(label_points = True, kaggle = True)
 
 kaggle_dir = 'resumes/kaggle_small/'
 kaggle_small = TextPool(kaggle_dir, 'resumes')
 
 # Separation
 print("All kaggle small separation", kaggle_small.calc_separation())
-kaggle_small.plot_texts(label_points = True, kaggle = True)
+kaggle_small.plot_texts(label_points = True, kaggle = False)
 
 
 # Smaller dataset has less separation, which would be bad if that weren't the case.

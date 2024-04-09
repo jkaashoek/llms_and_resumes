@@ -12,7 +12,7 @@ import numpy as np
 from itertools import combinations
 
 class TextObj():
-    def __init__(self, fp, lazy_loading = True) -> None:
+    def __init__(self, fp, lazy_loading = True, embed = True) -> None:
         self.fp = fp
         self.text_name = fp.split('/')[-1][:-4]
         self.text = self.extract_text(self.fp)
@@ -26,7 +26,11 @@ class TextObj():
             self.cleaned_text = TextObj.run_and_get(self.clean_question, self.clean_agent, Model('gpt-4-1106-preview'))
         else:
             self.cleaned_text = self.text
-        self.embedding = self.calc_embeddings(self.cleaned_text)
+        
+        if embed:
+            self.embedding = self.calc_embeddings(self.cleaned_text)
+        else:
+            self.embedding = None
 
         return
     
@@ -120,10 +124,6 @@ class TextObj():
         return self.text
 
 class Resume(TextObj):
-    def __init__(self, resume_path, lazy_loading = True) -> None:
-        self.modifications = []
-        super().__init__(resume_path, lazy_loading)
-
 
     def summarize(self):
         persona_instructions = 'You are an expert recruiter who has been hired to summarize resumes for hiring managers to make decisions on who to hire.'
@@ -145,8 +145,6 @@ class Resume(TextObj):
         return agent, question
 
 class JobDescription(TextObj):
-    def __init__(self, job_description_path, lazy_loading = True) -> None:
-        super().__init__(job_description_path, lazy_loading) 
 
     def summarize(self):
         persona_instructions = 'You are an expert recruiter who has been hired to summarize job descriptions for hiring managers to make decisions on who to hire.'
@@ -179,17 +177,18 @@ class JobDescription(TextObj):
 # We could have a run method that just takes the right prompts and runs them?
     
 class TextPool():
-    def __init__(self, fp, text_type) -> None:
+    def __init__(self, fp, text_type, embed = True) -> None:
         self.fp = fp
         self.text_type = text_type
 
         if text_type == 'resumes':
-            self.texts = [Resume(fp + f) for f in os.listdir(fp) if not os.path.isdir(fp + f)]
+            self.texts = [Resume(fp + f, embed = embed) for f in os.listdir(fp) if not os.path.isdir(fp + f)]
         elif text_type == 'job_descriptions':
-            self.texts = [JobDescription(fp + f) for f in os.listdir(fp) if not os.path.isdir(fp + f)]
+            self.texts = [JobDescription(fp + f, embed = embed) for f in os.listdir(fp) if not os.path.isdir(fp + f)]
         else:
-            self.texts = [TextObj(fp + f) for f in os.listdir(fp) if not os.path.isdir(fp + f)]
+            self.texts = [TextObj(fp + f, embed = embed) for f in os.listdir(fp) if not os.path.isdir(fp + f)]
         self.text_names = [t.text_name for t in self.texts]
+        self.embeddings = np.array([t.embedding for t in self.texts])
 
         # print(self.text_names)
         # print(self.texts)
@@ -239,35 +238,7 @@ class TextPool():
         '''
         # pca = PCA(n_components=50)
         # pca_emb = pca.fit_transform(embeddings.reshape((-1,1)))
-        embeddings = np.array([t.embedding for t in self.texts])
-        X_embedded = TSNE(n_components=2,  perplexity = min(5, embeddings.shape[0] - 1)).fit_transform(embeddings)
-
-        plt.figure()
-
-        if kaggle:
-            cats = np.unique([t.text_name.split('_')[0] for t in self.texts])
-            colors = plt.cm.rainbow(np.linspace(0, 1, len(cats)))
-            for cat, color in zip(cats, colors):
-                idx = [i for i, t in enumerate(self.texts) if t.text_name.split('_')[0] == cat]
-                plt.scatter(X_embedded[idx,0], X_embedded[idx,1], color = color, label = cat)
-            plt.legend()
-        else:
-            plt.scatter(X_embedded[:,0], X_embedded[:,1])
-
-            if label_points:
-                for i in range(X_embedded.shape[0]):
-                    plt.text(X_embedded[i, 0], X_embedded[i, 1], self.text_names[i])
-
-
-        # for i in range(X_embedded.shape[0]):
-        #     if i == 0:
-        #         plt.scatter(X_embedded[i, 0], X_embedded[i, 1], color = 'red', label = 'original')
-        #     else:
-        #         plt.scatter(X_embedded[i, 0], X_embedded[i, 1], color = 'black', label = 'modified')
-
-        # plt.legend()
-        plt.show()
-
+        TextPool.plot_embeddings(self.embeddings, self.text_names, label_points = label_points, kaggle = kaggle)
         return
     
     @staticmethod
@@ -371,4 +342,27 @@ class TextPool():
         print("Querying LLM")
         res = survey.by(agent).by(models).run()
         return TextPool.clean_eval_results(res.to_pandas())
-    
+
+    @staticmethod
+    def plot_embeddings(embeddings, names, label_points = False, kaggle = False):
+        # embeddings = np.array([t.embedding for t in texts])
+        # names = [t.text_name for t in texts]
+        X_embedded = TSNE(n_components=2,  perplexity = min(5, embeddings.shape[0] - 1)).fit_transform(embeddings)
+
+        plt.figure()
+
+        if kaggle:
+            cats = np.unique([t.split('_')[0] for t in names])
+            colors = plt.cm.rainbow(np.linspace(0, 1, len(cats)))
+            for cat, color in zip(cats, colors):
+                idx = [i for i, t in enumerate(names) if t.split('_')[0] == cat]
+                plt.scatter(X_embedded[idx,0], X_embedded[idx,1], color = color, label = cat)
+            plt.legend()
+        else:
+            plt.scatter(X_embedded[:,0], X_embedded[:,1])
+
+        if label_points:
+            for i in range(X_embedded.shape[0]):
+                plt.text(X_embedded[i, 0], X_embedded[i, 1], names[i])
+        plt.show()
+ 
