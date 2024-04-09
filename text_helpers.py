@@ -24,10 +24,9 @@ class TextObj():
             # Clean
             self.clean_question, self.clean_agent = self.llm_clean_text()
             self.cleaned_text = TextObj.run_and_get(self.clean_question, self.clean_agent, Model('gpt-4-1106-preview'))
-            self.embedding = self.calc_embeddings(self.cleaned_text)
         else:
             self.cleaned_text = self.text
-            self.embedding = self.calc_embeddings(self.text)
+        self.embedding = self.calc_embeddings(self.cleaned_text)
 
         return
     
@@ -114,6 +113,7 @@ class TextObj():
 
     @staticmethod 
     def run_and_get(question, agent, model):
+        print("Querying LLM")
         return question.by(agent).by(model).run().select(question.question_name).to_list()[0]
 
     def __str__(self) -> str:
@@ -191,8 +191,8 @@ class TextPool():
             self.texts = [TextObj(fp + f) for f in os.listdir(fp) if not os.path.isdir(fp + f)]
         self.text_names = [t.text_name for t in self.texts]
 
-        print(self.text_names)
-        print(self.texts)
+        # print(self.text_names)
+        # print(self.texts)
 
         return
     
@@ -316,6 +316,7 @@ class TextPool():
         '''
         survey = Survey(questions = question_list)
         edsl_model = Model(model)
+        print("Querying LLM")
         res = survey.by(agent).by(edsl_model).run()
 
         return TextPool.clean_survey(res)
@@ -367,6 +368,7 @@ class TextPool():
                                              question_text = eval_options.get('question', 'Evaluate the following text on a scale of 1 to 10') + "\n\n" + x.cleaned_text,
                                              question_options = eval_options.get('options', list(range(1, 11))) ) for x in self.texts]
         survey = Survey(questions = question_list)
+        print("Querying LLM")
         res = survey.by(agent).by(models).run()
         return TextPool.clean_eval_results(res.to_pandas())
     
