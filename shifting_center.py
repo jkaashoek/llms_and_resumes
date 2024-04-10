@@ -34,6 +34,17 @@ with open('resumes/morphing/ai_resume_generic_engineer.txt', 'w') as file:
     file.write(resume)
 
 print("Done")
-# -
 
+# +
+# Now start from a human resume
+with open('resumes/extracted_resumes/cleaned/technology_resume_cleaned.txt', 'r') as file:
+    human_res = file.read()
 
+agent_persona = "You are an expert resume writer. You have been hired to help people edit their resumes before they apply to the following job \n\n" + job_post
+agent = Agent(traits={'persona': agent_persona})
+model = Model('gpt-4-1106-preview')
+q_base =  "Edit the following resume to make it suitable for the job post: \n\n %s"
+
+for i in range(5):
+    
+query = QuestionFreeText(question_name='gen_resume', question_text = q_base % human_res)
