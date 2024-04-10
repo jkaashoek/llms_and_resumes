@@ -4,3 +4,6 @@ edsl_env
 
 # EDSL files
 *.db
+
+# Don't want to add lots of text files
+experiments/
