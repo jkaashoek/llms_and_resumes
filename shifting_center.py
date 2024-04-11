@@ -38,23 +38,29 @@ print("Done")
 # +
 # from edsl.questions import QuestionFreeText
 # Now start from a human resume
-with open('resumes/extracted_resumes/cleaned/technology_resume_cleaned.txt', 'r') as file:
-    human_res = file.read()
+# init_fp = 'resumes/extracted_resumes/cleaned/technology_resume_cleaned.txt'
+# init_fp = 'resumes/morphing/technology_resume_iteration_6.txt'
+# init_fp = 'resumes/morphing/technology_not_job_specific/technology_resume_cleaned.txt'
+init_fp = 'resumes/morphing/technology_not_job_specific/technology_resume_iteration_8.txt'
 
-agent_persona = "You are an expert resume writer. You have been hired to help people edit their resumes before they apply to the following job \n\n" + job_post
+with open(init_fp, 'r') as file:
+    init_res = file.read()
+
+# agent_persona = "You are an expert resume writer. You have been hired to help people edit their resumes before they apply to the following job \n\n" + job_post
+agent_persona = "You are an expert resume writer. You have been hired to help people edit their resumes before they apply to a job."
 agent = Agent(traits={'persona': agent_persona})
 model = Model('gpt-4-1106-preview')
 q_base =  "Improve the following resume to make it stronger for the job post. Return the entire resume with your changes incorporated as your response.: \n\n %s"
-prev_iteration = human_res
+prev_iteration = init_res
 
-for i in range(5):
+for i in range(8, 10):
     print(f"Running iteration {i}")
     query = QuestionFreeText(question_name='gen_resume', question_text = q_base % prev_iteration)
     resp = query.by(agent).by(model).run()
     new_resume = resp.select("gen_resume").to_list()[0]
     
     # Write the result to a file
-    with open (f'resumes/morphing/technology_resume_iteration_{i+1}.txt', 'w') as file:
+    with open (f'resumes/morphing/technology_not_job_specific/technology_resume_iteration_{i+1}.txt', 'w') as file:
         file.write(new_resume)
 
     prev_iteration = new_resume
@@ -63,16 +69,21 @@ print("DONE")
 # -
 
 # Now let's see what the did
-pool = TextPool('resumes/morphing/', 'resumes')
+pool_generic = TextPool('resumes/morphing/technology_not_job_specific/', 'resumes')
+pool_job_spec = TextPool('resumes/morphing/technology_job_specific/', 'resumes')
 
 # +
-embeddings, names = pool.embeddings, pool.text_names
-TextPool.plot_embeddings(embeddings, names, label_points = True) #kaggle = True)
+print("The generic pool") 
+TextPool.plot_embeddings(pool_generic.embeddings, pool_generic.text_names, label_points = True) 
 
-ai_resume = Resume('resumes/morphing/ai_resume_generic_engineer.txt')
 
-print(pool.get_similarities(ai_resume))
-print(pool.text_names)
+print("The job specific pool")
+TextPool.plot_embeddings(pool_job_spec.embeddings, pool_job_spec.text_names, label_points = True) 
+
+# ai_resume = Resume('resumes/morphing/ai_resume_generic_engineer.txt')
+
+# print(pool.get_similarities(ai_resume))
+# print(pool.text_names)
 
 # -
 
