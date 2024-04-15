@@ -152,7 +152,6 @@ print(y_test.value_counts())
 
 p_str = 'original'
 for p_str in pool_strs:
-    print(f"---Evaluating {p_str} ---")
     X_train_cv = cv.fit_transform(X_train[p_str]) 
     X_test_cv = cv.transform(X_test[p_str])
 
@@ -162,6 +161,7 @@ for p_str in pool_strs:
     clf = xgb.XGBClassifier()
     clf.fit(X_train_cv, y_train)
     y_pred = clf.predict(X_test_cv)
+    print(f"--- AUROC on test data for {p_str} ---")
     print(roc_auc_score(y_test, y_pred))
 
 
