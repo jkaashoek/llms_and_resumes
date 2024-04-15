@@ -9,13 +9,14 @@ from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 import os
 import numpy as np
+import pandas as pd
 from itertools import combinations
 
 class TextObj():
-    def __init__(self, fp, lazy_loading = True, embed = True) -> None:
-        self.fp = fp
-        self.text_name = fp.split('/')[-1][:-4]
-        self.text = self.extract_text(self.fp)
+    def __init__(self, text, text_name, lazy_loading = True, embed = True) -> None:
+        # self.fp = fp
+        self.text_name = text_name
+        self.text = text
         self.summary = None
 
         if not lazy_loading:
@@ -177,22 +178,26 @@ class JobDescription(TextObj):
 # We could have a run method that just takes the right prompts and runs them?
     
 class TextPool():
-    def __init__(self, fp, text_type, embed = True) -> None:
-        self.fp = fp
-        self.text_type = text_type
-
-        if text_type == 'resumes':
-            self.texts = [Resume(fp + f, embed = embed) for f in os.listdir(fp) if not os.path.isdir(fp + f)]
-        elif text_type == 'job_descriptions':
-            self.texts = [JobDescription(fp + f, embed = embed) for f in os.listdir(fp) if not os.path.isdir(fp + f)]
+    def __init__(self, init_obj, text_type, lazy_loading = True, embed = True, text_col = 'text', text_name_col = 'text_name') -> None:
+        '''
+        A pool an be initialized with either a string indicating a directory of texts or a pandas dataframe where text_col is the column containing the text
+        '''
+        
+        if type(init_obj) == str:
+            self.text_df = TextPool.extract_from_dir(init_obj)
         else:
-            self.texts = [TextObj(fp + f, embed = embed) for f in os.listdir(fp) if not os.path.isdir(fp + f)]
+            self.text_df = init_obj
+        
+        if text_type == 'resumes':
+            self.texts = [Resume(row[text_col], row[text_name_col], lazy_loading = lazy_loading, embed = embed) for _, row in self.text_df.iterrows()]
+        elif text_type == 'job_descriptions':
+            self.texts = [JobDescription(row[text_col], row[text_name_col], lazy_loading = lazy_loading, embed = embed) for _, row in self.text_df.iterrows()]
+        else:
+            self.texts = [TextObj(row[text_col], row[text_name_col], lazy_loading = lazy_loading, embed = embed) for _, row in self.text_df.iterrows()]
+
         self.text_names = [t.text_name for t in self.texts]
         self.embeddings = np.array([t.embedding for t in self.texts])
-
-        # print(self.text_names)
-        # print(self.texts)
-
+        
         return
     
     def get_similarities(self, orig_text : TextObj, dist_function = cosine):
@@ -365,4 +370,17 @@ class TextPool():
             for i in range(X_embedded.shape[0]):
                 plt.text(X_embedded[i, 0], X_embedded[i, 1], names[i])
         plt.show()
- 
+    
+    @staticmethod
+    def extract_from_dir(fp : str):
+        '''
+        Extracts text objects from a directory
+        '''
+        all_texts = []
+        for f in os.listdir(fp):
+            if not os.path.isdir(fp + f):
+                text = TextObj.extract_text(fp + f)
+                text_name = f.split('/')[-1][:-4]
+                all_texts.append([text, text_name])
+        df = pd.DataFrame(all_texts, columns = ['text', 'text_name'])
+        return df
