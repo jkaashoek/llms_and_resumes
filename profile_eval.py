@@ -119,7 +119,50 @@ p2 = pools[pool_strs.index(t2)]
 
 embeddings = np.append(p1.embeddings, p2.embeddings, axis=0)
 names = [f"{t1}_{n}" for n in p1.text_names] + [f"{t2}_{n}" for n in p2.text_names]
-TextPool.plot_embeddings(embeddings, names, kaggle=True)
-# -
+plot_args = {'s': 4, 'alpha': 0.4}
+TextPool.plot_embeddings(embeddings, names, kaggle=True, **plot_args)
+
+# +
+# Now, let's see if we can predict the country
+profile_with_updates['reg_country_name'].value_counts()
+
+# Let's just try to predict if the coutnry is US or not
+profile_with_updates['is_us'] = profile_with_updates['reg_country_name'] == 'United States'
+
+# Train-test split
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, roc_auc_score, f1_score
+from sklearn.feature_extraction.text import CountVectorizer
+import nltk
+
+
+import re
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
+lemmatizer = WordNetLemmatizer()
+
+import xgboost as xgb 
+
+cv = CountVectorizer(stop_words='english', max_features=5000)
+
+# We'll start pretty simply with a bag of words model
+X_train, X_test, y_train, y_test = train_test_split(profile_with_updates, profile_with_updates['is_us'], test_size=0.2, random_state=42)
+print(y_test.value_counts())
+
+p_str = 'original'
+for p_str in pool_strs:
+    print(f"---Evaluating {p_str} ---")
+    X_train_cv = cv.fit_transform(X_train[p_str]) 
+    X_test_cv = cv.transform(X_test[p_str])
+
+    # clf = xgb.XGBClassifier(max_depth=6, learning_rate=0.1,silent=True, objective='binary:logistic', \
+                        # booster='gbtree', n_jobs=8, nthread=None, gamma=0, min_child_weight=1, max_delta_step=0, \
+                        # subsample=0.8, colsample_bytree=0.8, colsample_bylevel=1, reg_alpha=0, reg_lambda=1)
+    clf = xgb.XGBClassifier()
+    clf.fit(X_train_cv, y_train)
+    y_pred = clf.predict(X_test_cv)
+    print(roc_auc_score(y_test, y_pred))
+
 
 

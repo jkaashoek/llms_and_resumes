@@ -366,7 +366,7 @@ class TextPool():
         return TextPool.clean_eval_results(res.to_pandas())
 
     @staticmethod
-    def plot_embeddings(embeddings, names, label_points = False, kaggle = False):
+    def plot_embeddings(embeddings, names, label_points = False, kaggle = False, **plot_args):
         # embeddings = np.array([t.embedding for t in texts])
         # names = [t.text_name for t in texts]
         X_embedded = TSNE(n_components=2,  perplexity = min(5, embeddings.shape[0] - 1)).fit_transform(embeddings)
@@ -378,10 +378,10 @@ class TextPool():
             colors = plt.cm.rainbow(np.linspace(0, 1, len(cats)))
             for cat, color in zip(cats, colors):
                 idx = [i for i, t in enumerate(names) if t.split('_')[0] == cat]
-                plt.scatter(X_embedded[idx,0], X_embedded[idx,1], color = color, label = cat, alpha = 0.5, s = 0.1)
+                plt.scatter(X_embedded[idx,0], X_embedded[idx,1], color = color, label = cat, **plot_args)
             plt.legend()
         else:
-            plt.scatter(X_embedded[:,0], X_embedded[:,1])
+            plt.scatter(X_embedded[:,0], X_embedded[:,1], **plot_args)
 
         if label_points:
             for i in range(X_embedded.shape[0]):
