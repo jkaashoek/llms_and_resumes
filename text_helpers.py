@@ -197,7 +197,10 @@ class TextPool():
 
         self.text_names = [t.text_name for t in self.texts]
         self.embeddings = np.array([t.embedding for t in self.texts])
-        
+
+        # print(self.text_names)
+        # print(self.texts)
+
         return
     
     def get_similarities(self, orig_text : TextObj, dist_function = cosine):
@@ -216,16 +219,30 @@ class TextPool():
     #         t.embedding = t.calc_embeddings(t.cleaned_text)
     #     return
     
-    def calc_separation(self, dist_function = cosine):
+    def bootstrap_separation(self, dist_function, n = 100):
+        '''
+        Bootstrap the separation
+        '''
+        all_seps = []
+        for i in range(n):
+            idxs = np.random.choice(self.embeddings.shape[0], self.embeddings.shape[0], replace = True)
+            all_seps.append(TextPool.embedding_separation(self.embeddings[idxs], dist_function = dist_function))
+        return np.std(all_seps)
+    
+    def calc_separation(self, dist_function = cosine, add_bootstrap = False):
         '''
         Calculate the separation between the embeddings
         '''
-        max_dist = 0
-        for c in combinations(self.texts, 2):
-            dist = dist_function(c[0].embedding, c[1].embedding)
-            if dist > max_dist:
-                max_dist = dist
-        return max_dist
+        # max_dist = 0
+        # for c in combinations(self.texts, 2):
+        #     dist = dist_function(c[0].embedding, c[1].embedding)
+        #     if dist > max_dist:
+        #         max_dist = dist
+        sep = TextPool.embedding_separation(self.embeddings, dist_function = dist_function)
+        sd = None
+        if add_bootstrap:
+            sd = self.bootstrap_separation(dist_function)
+        return sep, sd
     
     def add_text(self, text : TextObj):
         '''
@@ -361,7 +378,7 @@ class TextPool():
             colors = plt.cm.rainbow(np.linspace(0, 1, len(cats)))
             for cat, color in zip(cats, colors):
                 idx = [i for i, t in enumerate(names) if t.split('_')[0] == cat]
-                plt.scatter(X_embedded[idx,0], X_embedded[idx,1], color = color, label = cat)
+                plt.scatter(X_embedded[idx,0], X_embedded[idx,1], color = color, label = cat, alpha = 0.5, s = 0.1)
             plt.legend()
         else:
             plt.scatter(X_embedded[:,0], X_embedded[:,1])
@@ -384,3 +401,11 @@ class TextPool():
                 all_texts.append([text, text_name])
         df = pd.DataFrame(all_texts, columns = ['text', 'text_name'])
         return df
+    
+    @staticmethod
+    def embedding_separation(embeddings, dist_function = cosine):
+        '''
+        Calculate the separation between the embeddings
+        '''
+        center = np.mean(embeddings, axis = 0)
+        return np.median([dist_function(center, emb) for emb in embeddings])
