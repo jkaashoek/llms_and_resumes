@@ -369,8 +369,8 @@ class TextPool():
     def plot_embeddings(embeddings, names, label_points = False, kaggle = False, **plot_args):
         # embeddings = np.array([t.embedding for t in texts])
         # names = [t.text_name for t in texts]
-        X_embedded = TSNE(n_components=2,  perplexity = min(5, embeddings.shape[0] - 1)).fit_transform(embeddings)
-
+        # X_embedded = TSNE(n_components=2,  perplexity = min(5, embeddings.shape[0] - 1)).fit_transform(embeddings)
+        X_embedded = PCA(n_components=2).fit_transform(embeddings)
         plt.figure()
 
         if kaggle:

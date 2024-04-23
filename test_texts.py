@@ -17,15 +17,15 @@ kaggle_small = TextPool(kaggle_dir, 'resumes')
 
 # Separation
 print("All kaggle small separation", kaggle_small.calc_separation())
-# kaggle_small.plot_texts(label_points = True, kaggle = False)
+kaggle_small.plot_texts(label_points = True, kaggle = False)
 
 
 # Let's initialize with a dataframe
-df = TextPool.extract_from_dir(kaggle_dir)
-pool_from_df = TextPool(df, 'resumes')
+# df = TextPool.extract_from_dir(kaggle_dir)
+# pool_from_df = TextPool(df, 'resumes')
 
 
-print("All kaggle small separation", pool_from_df.calc_separation())
+# print("All kaggle small separation", pool_from_df.calc_separation())
 # Smaller dataset has less separation, which would be bad if that weren't the case.
 # We could start to look at differences at the resume section level
 
