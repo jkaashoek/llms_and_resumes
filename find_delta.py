@@ -175,8 +175,9 @@ for i, p in eval_infer.iterrows():
 # What if we ask the LLM to improve the resume and look at the distance between the two?
 
 # +
-improve_persona = "You are an expert in hiring practices and have been asked to improve candidate profiles."
-improve_question = "Improve the following profile \n\n %s"
+# improve_persona = "You are an expert in hiring practices and have been asked to improve candidate profiles."
+improve_persona = "You are an expert editor. You have been asked to fix spelling and grammar errors in candidate profiles."
+improve_question = "Fix the following profile \n\n %s"
 improve_qs = Survey([QuestionFreeText(question_name=f"improve_{row['freelancer_key']}", question_text = improve_question % row['profile_overview']) for _, row in profiles_test.iterrows()])
 improve_res = improve_qs.by(Agent(traits={'persona':improve_persona})).run()
 
@@ -186,8 +187,41 @@ improve_df['freelancer_key'] = improve_df['variable'].str.split('_').str[-1].ast
 print(improve_df)
 # -
 
-embed_model = 
+from InstructorEmbedding import INSTRUCTOR
+embedding_model = INSTRUCTOR('hkunlp/instructor-large')
 # Merge with the originals
 improve_eval = profiles_test.merge(improve_df, on='freelancer_key')
+# Some profiles failed
+improve_eval = improve_eval.dropna()
+print(improve_eval)
 # Embed the columns
+original_embeds = [embedding_model.encode(x) for x in improve_eval['profile_overview'].values]
+improve_embeds = [embedding_model.encode(x) for x in improve_eval['value'].values]
 
+# +
+# Calculate the cosine similarity
+from sklearn.metrics.pairwise import cosine_similarity
+similarity = np.diag(cosine_similarity(original_embeds, improve_embeds))
+print(similarity.shape)
+
+plt.figure()
+plt.hist(similarity.flatten(), bins=20)
+plt.show()
+
+# +
+# Pretty much what I would've expected - there's a few profiles that get a lot of improvement, most aren't that far apart in embedding space. 
+
+improve_eval['pred_hire'] = [1 if x > np.median(similarity) else 0 for x in similarity.flatten()]
+print(confusion_matrix(improve_eval['hired'], improve_eval['pred_hire'])) # Not great, but not terrible. We get over 50% accuracy just based on how much the profile changed 
+# -
+
+# What was the point of this? 
+# I was surprised that the LLM refused to make a decision on so many cases. 
+# Reading through them, it does feel like there is signal on whether the person is US or not (I definitely could tell based on grammar, which seems like a pretty easy thing for the LLM to understand)
+# My hypothesis was that if the LLM thinks there is a lot to fix in order to improve the profile, then that's a better indiciation that the profile is non-American. 
+# I should've told it to just fix spelling and grammar. 
+# Going back to redo that now. 
+#
+# Result is just about the same: we're able to get a good bit of signal out of just improving spelling and grammar 
+
+#
