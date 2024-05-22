@@ -223,5 +223,32 @@ print(confusion_matrix(improve_eval['hired'], improve_eval['pred_hire'])) # Not 
 # Going back to redo that now. 
 #
 # Result is just about the same: we're able to get a good bit of signal out of just improving spelling and grammar 
+#
+# What are the next steps here? Ideally there's a nicer way to learn country of origin. 
+# One of the problems that I'm running into is that we have both selective labels and omitted payoff bias. 
+#
+# Step 1: Filter to profiles that are relatively easy to decipher: could you infer whether this candidate is from the US or not yes/no.
+# Step 2: Select a small sample to use as examples for the agent. 
+# Step 3: ask to predict country
+# Step 4: redact
+# Step 5: ask to predict country 
+#
+# This is much more inline with the Tiresias work. 
+# We actually want something much more general for our purposes. 
+#
+# For a given employer, can we learn if they will hire a person or not. 
+#
+# Step 1: Take the filtered dataset from above (the one where the LLM thinks it can infer race). Assign 1 to all US people in that dataset.
+# Step 2: Ask the LLM to learn the decisions on a subset of the data in step 1
+# Step 3: On a new dataset, ask the LLM to predict hiring on a test set
+# Step 4: Ask the LLM to modify the test set based on what it learned in Step 2
+# Step 5: ask the LLM to predict hiring on the the data in Step 4. 
+#
+# There are some clear questions that we would need to answer. 
+# Does the LLM predicting hiring actually mirror what the human would have done? 
+# Can't really answer that here - the answer is yes if it's able to predict country of origin but this is super stylized. 
+# We would need a bunch of employer's decisions for a particular job/jobs.
+# The other problem to content with is that well maybe the employer just made the right decision in not hiring this person. 
+# How to get at this? 
 
 #
