@@ -1,0 +1,14 @@
+ python make_decisions.py  data/sampled_profiles/profiles_original_sample_100.csv \
+    --text_column profile_overview \
+    --decision_id_column freelancer_key
+
+python learn_and_adjust computed_objects/profiles_original_sample_100_decisions.csv \
+    --text_column profile_overview \
+
+ python make_decisions.py  computed_objects/profiles_original_sample_100_generic_adjustment.csv \
+    --text_column value \
+    --decision_id_column freelancer_key
+
+ python make_decisions.py  computed_objects/profiles_original_sample_100_tailored_adjustment.csv \
+    --text_column value \
+    --decision_id_column freelancer_key
